@@ -1,0 +1,352 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.exe-container.show {
+  max-height: 800px; /* pode ajustar esse valor conforme necessário */
+  border: 1px solid #b4b7c0;
+  border-radius: 12px;
+  padding: 5px;
+  opacity: 5;
+  margin-top: 20px;
+}
+
+.grupo-executaveis {
+  width: 100%;
+  background: #f9fbff;
+  border: 1px solid #58595c;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.grupo-executaveis:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.grupo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+
+.toggle-icon3 {
+  font-size: 24px;
+  color: #0D47A1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-icon3.active {
+ transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+/* ==== CONTAINER DOS BOTÕES ==== */
+.exe-container {
+  display: flex;
+   max-height: 0;
+    overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  flex-wrap: wrap;   /* quebra linha quando faltar espaço */
+  gap: 25px;         /* espaçamento entre botões */
+
+}
+
+/* ==== BOTÕES ==== */
+.Exe01,
+.Exe02,
+.Exe03,
+.Exe04,
+.Exe05,
+.Exe06,
+.Exe07,
+.Exe08,
+.Exe09,
+.Exe10,
+.Exe11,
+.Exe12,
+.Exe13,
+.Exe14,
+.Exe15,
+.Exe16,
+.Exe17,
+.Exe18,
+.Exe19,
+.Exe20,
+.Exe21,
+.Exe22,
+.Exe23,
+.Exe24,
+.Exe25,
+.Exe26,
+.Exe27,
+.Exe28,
+.Exe29,
+.Exe30,
+.Exe31,
+.Exe32,
+.Exe33,
+.Exe34{
+  width: 180px; 
+  height: 60px; 
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Ícone dentro do botão */
+.Exe01::before,
+.Exe02::before,
+.Exe03::before,
+.Exe04::before,
+.Exe05::before,
+.Exe06::before,
+.Exe07::before,
+.Exe08::before,
+.Exe09::before,
+.Exe10::before,
+.Exe11::before,
+.Exe12::before,
+.Exe13::before,
+.Exe14::before,
+.Exe15::before,
+.Exe16::before,
+.Exe17::before,
+.Exe18::before,
+.Exe19::before,
+.Exe20::before,
+.Exe21::before,
+.Exe22::before,
+.Exe23::before,
+.Exe24::before,
+.Exe25::before,
+.Exe26::before,
+.Exe27::before,
+.Exe28::before,
+.Exe29::before,
+.Exe30::before,
+.Exe31::before,
+.Exe32::before,
+.Exe33::before,
+.Exe34::before{
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 24 24'%3E%3Cpath d='M5 20h14v-2H5v2zm7-18v12l5-5h-4V4h-2v5H7l5 5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.highlight {
+    color: #1f497c;
+}
+
+
+.toggle-icon3 {
+  font-size: 24px;
+  color: #0D47A1;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.title { font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d47a1;
+  
+} 
+
+
+#linha7 {
+    position: relative;
+    display: inline-block;
+}
+
+#linha::after {
+    content: "";
+    display: block;
+    width: 108px;         
+    height: 1px;          
+    background-color: #0d47a1; 
+    margin-top: 4px;      
+}
+
+
+
+.Exe01:hover::before,
+.Exe02:hover::before,
+.Exe03:hover::before,
+.Exe04:hover::before,
+.Exe05:hover::before,
+.Exe06:hover::before,
+.Exe07:hover::before,
+.Exe08:hover::before,
+.Exe09:hover::before,
+.Exe10:hover::before,
+.Exe11:hover::before,
+.Exe12:hover::before,
+.Exe13:hover::before,
+.Exe14:hover::before,
+.Exe15:hover::before,
+.Exe16:hover::before,
+.Exe17:hover::before,
+.Exe18:hover::before,
+.Exe19:hover::before,
+.Exe20:hover::before,
+.Exe21:hover::before,
+.Exe22:hover::before,
+.Exe23:hover::before,
+.Exe24:hover::before,
+.Exe25:hover::before,
+.Exe26:hover::before,
+.Exe27:hover::before,
+.Exe28:hover::before,
+.Exe29:hover::before,
+.Exe30:hover::before,
+.Exe31:hover::before,
+.Exe32:hover::before,
+.Exe33:hover::before,
+.Exe34:hover::before
+ {
+  transform: translateY(4px); 
+}
+
+
+.Exe01:hover,
+.Exe02:hover,
+.Exe03:hover,
+.Exe04:hover,
+.Exe05:hover,
+.Exe06:hover,
+.Exe07:hover,
+.Exe08:hover,
+.Exe09:hover,
+.Exe10:hover,
+.Exe11:hover,
+.Exe12:hover,
+.Exe13:hover,
+.Exe14:hover,
+.Exe15:hover,
+.Exe16:hover,
+.Exe17:hover,
+.Exe18:hover,
+.Exe19:hover,
+.Exe20:hover,
+.Exe21:hover,
+.Exe22:hover,
+.Exe23:hover,
+.Exe24:hover,
+.Exe25:hover,
+.Exe26:hover,
+.Exe27:hover,
+.Exe28:hover,
+.Exe29:hover,
+.Exe30:hover,
+.Exe31:hover,
+.Exe32:hover,
+.Exe33:hover,
+.Exe34:hover
+{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2196F3, #0D47A1);
+}
+
+
+.Exe01:active,
+.Exe02:active,
+.Exe03:active,
+.Exe04:active,
+.Exe05:active,
+.Exe06:active,
+.Exe07:active,
+.Exe08:active,
+.Exe09:active,
+.Exe10:active,
+.Exe11:active,
+.Exe12:active,
+.Exe13:active,
+.Exe14:active,
+.Exe15:active,
+.Exe16:active,
+.Exe17:active,
+.Exe18:active,
+.Exe19:active,
+.Exe20:active,
+.Exe21:active,
+.Exe22:active,
+.Exe23:active,
+.Exe24:active,
+.Exe25:active,
+.Exe26:active,
+.Exe27:active,
+.Exe28:active,
+.Exe29:active,
+.Exe30:active,
+.Exe31:active,
+.Exe32:active,
+.Exe33:active,
+.Exe34:active
+{
+  transform: scale(0.96);
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 788px) {
+  .installider-container {
+    flex-direction: row;     /* empilha tudo */
+    flex-wrap: wrap;        /* centraliza no mobile */
+    justify-content: center;
+  }
+
+.Exe0{
+    flex: 0 0 100%;             /* ocupa 100% da largura */
+    max-width: 300px;           /* limite de largura */
+    text-align: center;         /* centraliza o conteúdo */
+  }
+}
+
+

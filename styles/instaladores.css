@@ -1,0 +1,379 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.installider-container.show {
+  max-height: 800px; /* pode ajustar esse valor conforme necessário */
+  border: 1px solid #b4b7c0;
+  border-radius: 12px;
+  padding: 5px;
+  opacity: 5;
+  margin-top: 20px;
+}
+
+.grupo-install {
+  width: 100%;
+  background: #f9fbff;
+  border: 1px solid #58595c;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.grupo-install:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.grupo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+
+.toggle-icon1 {
+  font-size: 24px;
+  color: #0D47A1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-icon1.active {
+ transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==== ESTILOS DE GRUPOS (CARDS) ==== */
+
+
+
+
+
+/* ==== TÍTULO DOS GRUPOS ==== */
+
+
+.title-install::before {
+  content: "📦"; /* ícone ilustrativo (pode trocar por outro) */
+  font-size: 20px;
+}
+
+/* ==== CONTAINER DOS BOTÕES ==== */
+.installider-container {
+  display: flex;
+   max-height: 0;
+    overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  flex-wrap: wrap;   /* quebra linha quando faltar espaço */
+  gap: 25px;         /* espaçamento entre botões */
+
+}
+
+/* ==== BOTÕES ==== */
+.install01,
+.install02,
+.install03,
+.install04,
+.install05,
+.install06,
+.install07,
+.install08,
+.install09,
+.install10,
+.install11,
+.install12,
+.install13,
+.install14,
+.install15,
+.install16,
+.install17,
+.install18,
+.install19,
+.install20,
+.install21,
+.install22,
+.install23,
+.install24,
+.install25,
+.install26,
+.install27,
+.install28,
+.install29,
+.install30,
+.install31,
+.install32,
+.install33{
+  width: 180px; 
+  height: 60px; 
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Ícone dentro do botão */
+.install01::before,
+.install02::before,
+.install03::before,
+.install04::before,
+.install05::before,
+.install06::before,
+.install07::before,
+.install08::before,
+.install09::before,
+.install10::before,
+.install11::before,
+.install12::before,
+.install13::before,
+.install14::before,
+.install15::before,
+.install16::before,
+.install17::before,
+.install18::before,
+.install19::before,
+.install20::before,
+.install21::before,
+.install22::before,
+.install23::before,
+.install24::before,
+.install25::before,
+.install26::before,
+.install27::before,
+.install28::before,
+.install29::before,
+.install30::before,
+.install31::before,
+.install32::before,
+.install33::before{
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 24 24'%3E%3Cpath d='M5 20h14v-2H5v2zm7-18v12l5-5h-4V4h-2v5H7l5 5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.highlight {
+    color: #1f497c;
+}
+
+#install-icon3 {
+    font-size: 70px; 
+    color: #0D47A1;
+
+}
+
+.toggle-icon1,
+#install-icon {
+  font-size: 24px;
+  color: #0D47A1;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.title { font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d47a1;
+  
+} 
+
+#install-icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+#install-icon3 {
+    margin-left: -12px;
+    margin-top: -2px; 
+    font-size: 28px;   
+    cursor: pointer;   
+}
+
+#install-icon {
+    margin-left: 2px;
+    margin-top: -7px; 
+    font-size: 24px;   
+    cursor: pointer;   
+}
+
+#linha7 {
+    position: relative;
+    display: inline-block;
+}
+
+#linha::after {
+    content: "";
+    display: block;
+    width: 108px;         
+    height: 1px;          
+    background-color: #0d47a1; 
+    margin-top: 4px;      
+}
+
+
+
+.install01:hover::before,
+.install02:hover::before,
+.install03:hover::before,
+.install04:hover::before,
+.install05:hover::before,
+.install06:hover::before,
+.install07:hover::before,
+.install08:hover::before,
+.install09:hover::before,
+.install10:hover::before,
+.install11:hover::before,
+.install12:hover::before,
+.install13:hover::before,
+.install14:hover::before,
+.install15:hover::before,
+.install16:hover::before,
+.install17:hover::before,
+.install18:hover::before,
+.install19:hover::before,
+.install20:hover::before,
+.install21:hover::before,
+.install22:hover::before,
+.install23:hover::before,
+.install24:hover::before,
+.install25:hover::before,
+.install26:hover::before,
+.install27:hover::before,
+.install28:hover::before,
+.install29:hover::before,
+.install30:hover::before,
+.install31:hover::before,
+.install32:hover::before,
+.install33:hover::before
+ {
+  transform: translateY(4px); 
+}
+
+
+.install01:hover,
+.install02:hover,
+.install03:hover,
+.install04:hover,
+.install05:hover,
+.install06:hover,
+.install07:hover,
+.install08:hover,
+.install09:hover,
+.install10:hover,
+.install11:hover,
+.install12:hover,
+.install13:hover,
+.install14:hover,
+.install15:hover,
+.install16:hover,
+.install17:hover,
+.install18:hover,
+.install19:hover,
+.install20:hover,
+.install21:hover,
+.install22:hover,
+.install23:hover,
+.install24:hover,
+.install25:hover,
+.install26:hover,
+.install27:hover,
+.install28:hover,
+.install29:hover,
+.install30:hover,
+.install31:hover,
+.install32:hover,
+.install33:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2196F3, #0D47A1);
+}
+
+
+.install01:active,
+.install02:active,
+.install03:active,
+.install04:active,
+.install05:active,
+.install06:active,
+.install07:active,
+.install08:active,
+.install09:active,
+.install10:active,
+.install11:active,
+.install12:active,
+.install13:active,
+.install14:active,
+.install15:active,
+.install16:active,
+.install17:active,
+.install18:active,
+.install19:active,
+.install20:active,
+.install21:active,
+.install22:active,
+.install23:active,
+.install24:active,
+.install25:active,
+.install26:active,
+.install27:active,
+.install28:active,
+.install29:active,
+.install30:active,
+.install31:active,
+.install32:active,
+.install33:active{
+  transform: scale(0.96);
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 788px) {
+  .installider-container {
+    flex-direction: row;     /* empilha tudo */
+    flex-wrap: wrap;        /* centraliza no mobile */
+    justify-content: center;
+  }
+
+.install0{
+    flex: 0 0 100%;             /* ocupa 100% da largura */
+    max-width: 300px;           /* limite de largura */
+    text-align: center;         /* centraliza o conteúdo */
+  }
+}

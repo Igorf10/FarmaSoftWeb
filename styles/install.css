@@ -1,0 +1,302 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+
+.grupo-install {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px 0;
+  position: relative;
+
+}
+
+.implantar-container.hidden {
+  display: none;
+}
+
+.toggle-icon1 {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  user-select: none;
+  
+}
+
+.toggle-icon1.active {
+  transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ==== ESTILOS DE GRUPOS (CARDS) ==== */
+.grupo-install {
+  background: #f9fbff;              /* fundo suave */
+  border: 1px solid #d0d7e1;        /* borda clara */
+  border-radius: 12px;              /* cantos arredondados */
+  padding: 20px;
+  margin-bottom: 25px;              /* espaço entre os grupos */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra leve */
+}
+
+/* ===== BOTÕES ===== */
+.install01, 
+.install02,
+.install03,
+.install04,
+.install05,
+.install06,
+.install07,
+.install08,
+.install09,
+.install10,
+.install11,
+.install12
+{
+  width: 180px; 
+  height: 60px; 
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+
+
+.install01::before,
+.install02::before,
+.install03::before,
+.install04::before,
+.install05::before,
+.install06::before,
+.install07::before,
+.install08::before,
+.install09::before,
+.install10::before,
+.install11::before,
+.install12::before
+ {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 24 24'%3E%3Cpath d='M5 20h14v-2H5v2zm7-18v12l5-5h-4V4h-2v5H7l5 5z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+.install01:hover::before,
+.install02:hover::before,
+.install03:hover::before,
+.isntall04:hover::before,
+.install05:hover::before,
+.install06:hover::before,
+.install07:hover::before,
+.install08:hover::before,
+.install09:hover::before,
+.install10:hover::before,
+.install11:hover::before,
+.install12:hover::before
+ {
+  transform: translateY(4px);
+}
+
+.install01:hover,
+.install02:hover,
+.install03:hover,
+.install04:hover,
+.install05:hover,
+.install06:hover,
+.install07:hover,
+.install08:hover,
+.install09:hover,
+.install10:hover,
+.install12:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2196F3, #0D47A1);
+}
+
+.install01:active,
+.install02:active,
+.install03:active,
+.install04:active,
+.install05:active,
+.install06:active,
+.install07:active,
+.install08:active,
+.install09:active,
+.install10:active,
+.install12:active {
+  transform: scale(0.96);
+}
+
+/* ===== CONTAINER ===== */
+.installider-container {
+  display: flex;
+  flex-wrap: wrap;          /* quebra linha se faltar espaço */
+  gap: 20px;                /* espaço uniforme entre os itens */
+  justify-content: flex-start;/* sempre alinhado à esquerda */
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+/* ===== BLOCO DE ARQUIVOS ===== */
+.install0
+ {
+  flex: 0 0 200px;   /* largura fixa para cada bloco */
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;  /* espaçamento vertical */
+
+}
+
+/* Se quiser destacar a primeira coluna (com título e ícone) */
+
+/* Bloco do banco */
+.grupo-install {
+  margin-bottom: 40px;  /* espaço entre um grupo e outro */
+  
+}
+
+/* Título do banco */
+
+.titulo-banco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003399;
+  margin-bottom: 15px;  /* espaço entre título e botões */
+  text-transform: uppercase;
+  border-bottom: 2px solid #003399;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+
+/* ===== HEADER / TITULOS ===== */
+.logo-farmax {
+  width: 400px;
+  height: auto;
+}
+
+.header-farmasoft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e3f2fd, #84a5c0);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.logo-container {
+  width: 100px;
+  height: auto;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0d47a1;
+  margin: 0;
+}
+
+.highlight {
+  color: #1f497c;
+}
+
+.toggle-icon1,
+.install-icon {
+  font-size: 24px;
+  color: #0D47A1;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.title, 
+.install-icon {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+#linha {
+  position: relative;
+  display: inline-block;
+
+}
+
+#linha::after {
+  content: "";
+  display: block;
+  width: 145px;
+  height: 1px;
+  background-color: #0d47a1;
+  margin-top: 1px;
+}
+
+/* ===== 📱 Responsividade ===== */
+@media (max-width: 768px) {
+  .installider-container {
+    flex-direction: column;     /* empilha tudo */
+    align-items: center;        /* centraliza no mobile */
+  }
+
+  .install0{
+    flex: 0 0 100%;             /* ocupa 100% da largura */
+    max-width: 300px;           /* limite de largura */
+    text-align: center;         /* centraliza o conteúdo */
+  }
+}
