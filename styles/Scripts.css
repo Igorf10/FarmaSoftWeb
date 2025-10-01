@@ -25,9 +25,7 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 padding: 20px;
 margin-bottom: 15px;
 transition: all 0.3s ease;
-overflow-x: auto;
-overflow-y: auto;
-max-height: 600px; /* define altura máxima */
+max-height: 800px; /* define altura máxima */
 white-space: nowrap; /* impede quebra de linha */
 }
 
@@ -227,3 +225,4 @@ color: #e06d21;
     text-align: center;         /* centraliza o conteúdo */
   }
 }
+
