@@ -344,7 +344,25 @@ nav.menu-lateral:hover ~ main.conteudo {
 }
 
 .card p {
-  color: #555;
+  color: #131212;
+  
+}
+
+
+.info{
+  background-color: rgb(8, 49, 230);
+  border: 3px solid #0d0d0e;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.info2{
+  background-color: rgb(230, 230, 8);
+  border: 3px solid #0d0d0e;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 360px) {
