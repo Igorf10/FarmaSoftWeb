@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.corpo {
+  min-height: 100vh; /* ocupa no mínimo a tela toda */
+  display: flex;
+  background: #fdfafa;
+}
+
+/* === MENU LATERAL === */
+nav.menu-lateral {
+  width: 80px;
+  height: 100vh;
+  background-color: #033a79;
+  box-shadow: 0px 0 0 #011541;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  overflow-y: auto;   /* rolagem vertical */
+  overflow-x: hidden; /* evita barra horizontal */
+
+  transition: width 0.2s ease;
+  padding-bottom: 40px;
+
+  /* Chrome, Edge e Safari */
+  nav.menu-lateral::-webkit-scrollbar {
+    width: 0; /* esconde a barra */
+  }
+
+  
+  
+  /* Firefox */
+  nav.menu-lateral {
+    scrollbar-width: none; /* esconde no Firefox */
+  }
+  
+  /* Edge antigo / IE */
+  nav.menu-lateral {
+    -ms-overflow-style: none; /* esconde no IE e Edge antigo */
+  }
+}
+
+/* Scroll personalizado */
+nav.menu-lateral::-webkit-scrollbar {
+  width: 0px;
+}
+nav.menu-lateral::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  opacity: 1;
+}
+nav.menu-lateral::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Efeito expandir no hover */
+nav.menu-lateral:hover {
+  width: 300px;
+}
+
+/* === BLOCO DA LOGO === */
+.logoFS,
+.logoFS2 {
+  background: #fff;
+  border-bottom-right-radius: 90px;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* Logo principal (mostra só quando aberto) */
+.logoFS {
+  display: none;
+}
+
+
+/* Estilo de seções */
+
+
+/* NOTAS */
+.notas {
+  margin-top: 30px;
+}
+
+/* SENHA DO DIA */
+.senha {
+  margin-top: 30px;
+}
+
+
+
+#link1{
+  margin-left: 95px;
+  margin-top: -14px;
+  font-size: 10px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+/* LINKS ajustados */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.links-item {
+  display: flex;
+    flex-direction: column; /* 🔥 agora título em cima e link embaixo */
+  align-items: flex-start; /* alinha tudo à esquerda */
+  padding: 5px;
+  gap: 3px;
+}
+
+.links-item h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.links-item a {
+  font-size: 14px;
+  margin-left: 25px;
+  color: #0d47a1;
+  text-decoration: none;
+  word-break: break-word; /* evita estouro */
+}
+
+
+
+.logoFS img {
+  width: 200px;
+  height: auto;
+  max-width: none;
+  transform: translateX(-23px);
+  transition: transform .28s ease;
+}
+
+nav.menu-lateral:hover .logoFS {
+  justify-content: center;
+}
+
+nav.menu-lateral:hover .logoFS {
+  display: flex; /* aparece a logo grande */
+}
+
+
+nav.menu-lateral:hover .logoFS2 {
+  display: none; /* some a logo reduzida */
+}
+
+nav.menu-lateral:hover .logoFS img {
+  transform: none;
+}
+
+/* === LISTA DE LINKS === */
+ul {
+  list-style-type: none;
+  height: 100%;
+}
+
+li.item-menu {
+  transition: 0.2s;
+}
+
+li.ativo,
+li.item-menu:hover {
+  background-color: #011541;
+}
+
+li.item-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+li.item-menu a .icon > i {
+  font-size: 30px;
+}
+
+li.item-menu a .txt-link {
+  margin-left: 20%;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Texto aparece no hover */
+nav.menu-lateral:hover ul li.item-menu a .txt-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* === CONTEÚDO PRINCIPAL === */
+main.conteudo {
+  margin-left: 80px;
+
+  padding: 20px;
+  width: calc(100% - 80px);
+  transition: margin-left 0.2s ease, width 0.2s ease;
+}
+
+nav.menu-lateral:hover ~ main.conteudo {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* === SEÇÕES === */
+.secao {
+  display: none;
+}
+.secao.ativa {
+  display: block;
+
+  /* 🔽 aqui faz o quadrado branco crescer para baixo */
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+
+  width: 100%;
+  min-height: 100vh; /* ocupa no mínimo a tela cheia */
+  height: auto;      /* cresce conforme o conteúdo */
+  margin-top: 2px;
+  margin-bottom: 30px;
+}
+
+/* === CARDS === */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.notas2{
+
+  margin-top: 20px;   /* espaço entre pesquisa e resultado */
+  width: 40%;
+  display: block;
+  clear: both;        /* garante que vá para baixo de floats ou flex */
+
+}
+
+.text1{
+  font-size: 20px;
+  margin-top: 20px;   /* espaço entre pesquisa e resultado */
+  width: 10%;
+  display: block;
+  clear: both;        /* garante que vá para baixo de floats ou flex */
+  margin-left: 0px;
+
+}
+
+
+.links{
+  margin-top: 20px;   /* espaço entre pesquisa e resultado */
+  width: 100%;
+  display: block;
+  clear: both;        /* garante que vá para baixo de floats ou flex */
+  margin-left: 3px;
+
+
+}
+
+
+.Senha{
+  background: #f9fbff;              /* fundo suave */
+  border: 1px solid #d0d7e1;        /* borda clara */
+  border-radius: 12px;              /* cantos arredondados */
+  padding: 20px;
+  margin-bottom: 25px;              /* espaço entre os grupos */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra leve */
+
+}
+
+
+.notas{
+  background: #f9fbff;              /* fundo suave */
+  border: 1px solid #d0d7e1;        /* borda clara */
+  border-radius: 12px;              /* cantos arredondados */
+  padding: 20px;
+  margin-bottom: 25px;              /* espaço entre os grupos */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra leve */
+
+}
+
+.links{
+  background: #f9fbff;              /* fundo suave */
+  border: 1px solid #d0d7e1;        /* borda clara */
+  border-radius: 12px;              /* cantos arredondados */
+  padding: 20px;
+  margin-bottom: 25px;              /* espaço entre os grupos */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra leve */
+
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card i {
+  font-size: 40px;
+  color: rgb(54, 128, 212);
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #011541;
+}
+
+.card p {
+  color: #131212;
+  
+}
+
+
+.info{
+  background-color: rgb(8, 49, 230);
+  border: 3px solid #0d0d0e;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.info2{
+  background-color: rgb(230, 230, 8);
+  border: 3px solid #0d0d0e;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 360px) {
+  .cards {
+    flex-direction: column;  /* coloca os cards/botões em coluna */
+    align-items: center;     /* centraliza */
+    gap: 15px;               /* espaço entre eles */
+  }
+
+  .card {
+    width: 100%;       /* ocupa toda a largura disponível */
+    max-width: 300px;  /* limite para não ficar exagerado */
+  }
+
+  .secao.ativa {
+    padding: 15px;     /* reduz um pouco a margem interna no mobile */
+  }
+}
+
