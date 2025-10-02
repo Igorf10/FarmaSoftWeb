@@ -128,6 +128,11 @@ document.querySelectorAll('.grupo-script').forEach(grupo => {
   downloadtitle18.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxScripts/releases/download/Script20/SP_ULTIMO_MOVIMENTO_VENDA.sql', 'SP_ULTIMO_MOVIMENTO_VENDA.SQL')
   });
+
+       
+  downloadtitle19.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxScripts/releases/download/SP_Precos_Corrigido/PrecosCorrigido.sql', 'SP_Precos_Corrigido.SQL')
+  });
   
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
