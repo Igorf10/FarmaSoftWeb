@@ -1,3 +1,57 @@
+    function PesquisarEx2() {
+  let termo = document.getElementById("PesquisarEXtexto").value.toLowerCase().trim();
+  let grupos = document.querySelectorAll(".grupo-executaveis");
+  let resultado = document.getElementById("result3");
+
+    if (termo === "") {
+    resultado.innerHTML = "Grupo não encontrado ❌";
+    grupos.forEach(grupo => grupo.classList.remove("highlight")); 
+    return; // encerra a função
+  }
+
+  let encontrado = false
+
+  grupos.forEach(grupo => {
+    let titulo = grupo.querySelector("h1")?.innerText.toLowerCase() || "";
+    let descricao = grupo.querySelector("h1.title")?.innerText.toLowerCase() || "";
+    let conteudo = grupo.querySelector(".exe-container");
+    let toggle = grupo.querySelector(".toggle-icon6");
+
+    if (titulo.includes(termo) || descricao.includes(termo)) {
+      grupo.scrollIntoView({ behavior: "smooth", block: "center" }); 
+      grupo.classList.add("highlight");
+
+
+      encontrado = true;
+      
+    } else {
+      grupo.classList.remove("highlight");
+    }
+  });
+
+  resultado.innerHTML = encontrado 
+    ? "Resultado encontrado 🔍" 
+    : "Nenhum grupo encontrado ❌";
+}
+
+document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
+  const header = grupo.querySelector('.grupo-header');
+  const toggle = grupo.querySelector('.toggle-icon3');
+  const conteudo = grupo.querySelector('.exe-container');
+
+  header.addEventListener('click', () => {
+    document.querySelectorAll('.grupo-executaveis').forEach(g => g.classList.remove('highlight'));
+    });
+  });
+
+   const inputPesquisar = document.getElementById("PesquisarEXtexto");
+
+inputPesquisar.addEventListener("focus", () => {
+  if (inputPesquisar. placeholder === "Descrição:PDV,FarmaxDanfe...") {
+    inputPesquisar. placeholder = "" 
+  }
+});
+
 document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const header = grupo.querySelector('.grupo-header');
   const toggle = grupo.querySelector('.toggle-icon3');
@@ -42,10 +96,14 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe32 = document.querySelector('.Exe32');
   const Exe33 = document.querySelector('.Exe33');
   const Exe34 = document.querySelector('.Exe34');
+  const Exe35 = document.querySelector('.Exe35');
+  const Exe36 = document.querySelector('.Exe36');
+  const Exe37 = document.querySelector('.Exe36');
+
 
 
   Exe01.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/FarmaxPDV.exe', 'FarmaxPDV4.3');
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/_FarmaxPDV.exe', 'FarmaxPDV4.3');
   });
 
   Exe02.addEventListener('click', () => {
@@ -54,7 +112,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
   
   Exe03.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor/Gestor.exe', 'Gestor4.3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor/_Gestor.exe', 'Gestor4.3')
   });
 
   Exe04.addEventListener('click', () => {
@@ -171,7 +229,22 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/ERROContingencias/ERRO.A3.CONTIGENCIA.rar', 'ERRO.A3.CONTIGENCIA')
   });
 
+  
+  Exe35.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Ibexpert24/ibexpert.exe', 'Exe.Ibexpert24')
+  });
 
+  
+  
+  Exe36.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Ibexpert12/ibexpert.exe', 'Exe.Ibexpert12')
+  });
+
+    
+  
+  Exe37.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD3/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+  });
 
 
   function baixarArquivo(url, nomeArquivo) {

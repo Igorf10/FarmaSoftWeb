@@ -1,3 +1,52 @@
+
+    function PesquisarSP2() {
+  let termo = document.getElementById("PesquisarSPtexto").value.toLowerCase().trim();
+  let grupos = document.querySelectorAll(".grupo-script");
+  let resultado = document.getElementById("result2");
+
+    if (termo === "") {
+    resultado.innerHTML = "Grupo não encontrado ❌";
+    grupos.forEach(grupo => grupo.classList.remove("highlight")); // remove highlight de todos
+    return; // encerra a função
+  }
+
+  let encontrado = false
+
+  grupos.forEach(grupo => {
+    let titulo = grupo.querySelector("h1")?.innerText.toLowerCase() || "";
+    let descricao = grupo.querySelector("pre.font1")?.innerText.toLowerCase() || "";
+    let conteudo = grupo.querySelector(".script-container");
+    let toggle = grupo.querySelector(".toggle-icon6");
+
+    if (titulo.includes(termo) || descricao.includes(termo)) {
+      grupo.scrollIntoView({ behavior: "smooth", block: "center" }); 
+      grupo.classList.add("highlight");
+
+
+      encontrado = true;
+      
+    } else {
+      grupo.classList.remove("highlight");
+    }
+  });
+
+  resultado.innerHTML = encontrado 
+    ? "Resultado encontrado 🔍" 
+    : "Nenhum grupo encontrado ❌";
+}
+
+document.querySelectorAll('.grupo-script').forEach(grupo => {
+  const header = grupo.querySelector('.grupo-header');
+  const toggle = grupo.querySelector('.toggle-icon6');
+  const conteudo = grupo.querySelector('.script-container');
+
+  header.addEventListener('click', () => {
+    document.querySelectorAll('.grupo-script').forEach(g => g.classList.remove('highlight'));
+    });
+  })
+
+
+
 document.querySelectorAll('.grupo-script').forEach(grupo => {
   const header = grupo.querySelector('.grupo-header');
   const toggle = grupo.querySelector('.toggle-icon6');
@@ -10,6 +59,17 @@ document.querySelectorAll('.grupo-script').forEach(grupo => {
 
     toggle.classList.toggle('active');
   });
+
+   const inputPesquisar = document.getElementById("PesquisarSPtexto");
+
+inputPesquisar.addEventListener("focus", () => {
+  if (inputPesquisar. placeholder === "Descrição:SP_nomedaSP..") {
+    inputPesquisar. placeholder = "" 
+  }
+});
+
+
+
 
 
   /*const copy = document.querySelectorAll('.copiar');
@@ -164,3 +224,4 @@ document.querySelectorAll('.grupo-script').forEach(grupo => {
       console.error('Falha ao copiar texto: ', err);
     }
   }
+
