@@ -20,6 +20,59 @@ display: none;
   transition: all 0.3s ease;
 }
 
+.highlight {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  transition: 0.3s;
+}
+
+#PesquisarSPtexto {
+  width: 250px; 
+  height: 40px; 
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* efeito quando clica dentro */
+#PesquisarSPtexto:focus {
+  border-color: #1976D2;
+  box-shadow: 0 0 5px rgba(25,118,210,0.5);
+}
+
+#result{
+  margin-top: 5px;
+}
+
+
+#PesquisarSP2{
+  width: 60px; 
+  height: 30px; 
+  border-radius: 10px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  clear: both; 
+  color: rgb(248, 245, 245);
+  font-size: 0.68rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+
+}
 
 .space0{
 background: #e6e8ec;

@@ -382,3 +382,43 @@ nav.menu-lateral:hover ~ main.conteudo {
   }
 }
 
+
+/* -------------------------------
+   CSS mínimo: manter menu fixo SEM quebrar o hover
+   Cole NO FINAL do seu CSS
+   ------------------------------- */
+
+/* mantém o menu aberto quando a classe .fixo for adicionada via JS */
+#menu-lateral.fixo {
+  width: 300px;
+}
+
+/* Mostrar logo grande e esconder logo pequena quando fixo */
+#menu-lateral.fixo .logoFS { 
+  display: flex;
+  justify-content: center;
+}
+#menu-lateral.fixo .logoFS2 {
+  display: none;
+}
+
+/* Mostrar os textos dos links quando fixo */
+#menu-lateral.fixo ul li.item-menu a .txt-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Ajuste do conteúdo principal quando o menu estiver fixo */
+#menu-lateral.fixo ~ main.conteudo {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+/* Evita que a logo fique "dançando" no abrir/fechar */
+#menu-lateral.fixo .logoFS img {
+  transform: none !important; /* fixa posição */
+}
+
+/* Também mantém centralizada */
+#menu-lateral.fixo .logoFS {
+  justify-content: center !important;
+}

@@ -65,6 +65,59 @@ body {
   to { opacity: 1; }
 }
 
+.highlight {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  transition: 0.3s;
+}
+
+#PesquisarEXtexto{
+  width: 250px; 
+  height: 40px; 
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* efeito quando clica dentro */
+#PesquisarEXtexto:focus {
+  border-color: #1976D2;
+  box-shadow: 0 0 5px rgba(25,118,210,0.5);
+}
+
+#result3{
+  margin-top: 5px;
+}
+
+
+#PesquisarEx2{
+  width: 60px; 
+  height: 30px; 
+  border-radius: 10px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  clear: both; 
+  color: rgb(248, 245, 245);
+  font-size: 0.68rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+
+}
 
 
 /* ==== CONTAINER DOS BOTÕES ==== */
@@ -113,7 +166,11 @@ body {
 .Exe31,
 .Exe32,
 .Exe33,
-.Exe34{
+.Exe34,
+.Exe35,
+.Exe36,
+.Exe37
+{
   width: 180px; 
   height: 60px; 
   background: linear-gradient(135deg, #1976D2, #0D47A1);
@@ -167,7 +224,10 @@ body {
 .Exe31::before,
 .Exe32::before,
 .Exe33::before,
-.Exe34::before{
+.Exe34::before,
+.Exe35::before,
+.Exe36::before,
+.Exe37::before{
   content: "";
   display: inline-block;
   width: 24px;
@@ -249,7 +309,10 @@ body {
 .Exe31:hover::before,
 .Exe32:hover::before,
 .Exe33:hover::before,
-.Exe34:hover::before
+.Exe34:hover::before,
+.Exe35:hover::before,
+.Exe36:hover::before,
+.Exe37:hover::before
  {
   transform: translateY(4px); 
 }
@@ -288,7 +351,10 @@ body {
 .Exe31:hover,
 .Exe32:hover,
 .Exe33:hover,
-.Exe34:hover
+.Exe34:hover,
+.Exe35:hover,
+.Exe36:hover,
+.Exe37:hover
 {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -329,7 +395,10 @@ body {
 .Exe31:active,
 .Exe32:active,
 .Exe33:active,
-.Exe34:active
+.Exe34:active,
+.Exe35:active,
+.Exe36:active,
+.Exe37:active
 {
   transform: scale(0.96);
 }
