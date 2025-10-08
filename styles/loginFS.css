@@ -1,0 +1,123 @@
+/* ===== Estilo geral ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0a2a4d, #0e3a73);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== Animação de entrada ===== */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Container principal ===== */
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  animation: fadeInZoom 0.8s ease-out;
+}
+
+/* ===== Cartão de login ===== */
+.login-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  text-align: center;
+  padding: 40px 30px;
+  transition: transform 0.3s;
+}
+
+/* ===== Logo e título ===== */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-area img {
+  width: 250px; /* 🔹 Tamanho aumentado */
+  max-width: 90%;
+  margin-bottom: 10px;
+  animation: fadeInZoom 1s ease-out;
+}
+
+.logo-area h2 {
+  color: #003366;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* ===== Formulário ===== */
+.form-area h3 {
+  margin: 15px -10px;
+  color: #003366;
+}
+
+.form-area input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px -15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-area input:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 6px rgba(0, 102, 204, 0.5);
+  outline: none;
+}
+
+/* ===== Botão ===== */
+.form-area button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #003366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.form-area button:hover {
+  background-color: #0055aa;
+  box-shadow: 0 0 15px rgba(0, 102, 204, 0.7);
+}
+
+/* ===== Mensagem ===== */
+#mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* ===== Efeito sutil na logo ===== */
+.logo {
+  transition: transform 0.4s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
