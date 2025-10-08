@@ -36,19 +36,38 @@ function geraSuperSenha() {
 }
 
 function login() {
-  const usuario = document.getElementById("usuario").value;
-  const senha = document.getElementById("senha").value;
+  const usuario = document.getElementById("usuario").value.trim();
+  const senha = document.getElementById("senha").value.trim();
   const senhaCorreta = geraSuperSenha();
   const msg = document.getElementById("mensagem");
 
-  if (senha.toUpperCase() === senhaCorreta.toUpperCase() && usuario ==="Master.Farmax") {
+  const isUserCorrect = usuario === "Master.Farmax"; // ou use .toLowerCase() se quiser case-insensitive
+  const isPassCorrect = senha === senhaCorreta;
+
+  if (isUserCorrect && isPassCorrect) {
     msg.style.color = "green";
     msg.textContent = "✅ Login realizado com sucesso!";
-        setTimeout(() => {
-      window.location.href = "homefs.html"; // Caminho da tua página principal
+    setTimeout(() => {
+      window.location.href = "homefs.html";
     }, 1500);
-  } else {
-    msg.style.color = "red";
-    msg.textContent = "❌ Senha incorreta. Tente novamente.";
+    return;
   }
+
+  // agora tratamos as demais possibilidades separadamente
+  if (!isUserCorrect && !isPassCorrect) {
+    msg.style.color = "red";
+    msg.textContent = "❌ Usuário e senha incorretos. Tente novamente.";
+    return;
+  }
+
+  if (!isUserCorrect) {
+    msg.style.color = "red";
+    msg.textContent = "❌ Usuário incorreto. Tente novamente.";
+    return;
+  }
+
+  // se chegou aqui, é porque a senha está incorreta (usuário certo)
+  msg.style.color = "red";
+  msg.textContent = "❌ Senha incorreta. Tente novamente.";
 }
+
