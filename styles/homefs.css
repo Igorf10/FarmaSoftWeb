@@ -286,6 +286,27 @@ nav.menu-lateral:hover ~ main.conteudo {
 
 }
 
+.toast2 {
+  position: fixed;
+  bottom: 40px;        /* centraliza verticalmente */
+  left: 50%;         /* centraliza horizontalmente */
+  transform: translateX(-50%) translateY(10px); /* animação inicial */
+  
+  background: #3e73d6;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.toast2.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* animação ao aparecer */
+}
 
 .Senha{
   background: #f9fbff;              /* fundo suave */
@@ -450,6 +471,38 @@ nav.menu-lateral:hover ~ main.conteudo {
 @keyframes popupIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+.senha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f4f8;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.SenhaResultado {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.copy-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-btn:hover {
+  background-color: #1d4ed8;
 }
 
 
