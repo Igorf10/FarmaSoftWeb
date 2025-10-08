@@ -93,3 +93,68 @@ btnNao.addEventListener('click', () => {
 btnSim.addEventListener('click', () => {
   window.location.href = 'index.html'; 
 });
+
+function Senhahome() {
+  const dias = [
+    "",
+    "",
+    "ALBERTO", "GILVETE", "GILBERT", "ANGELOS",
+    "MARCELO", "MATHEUS", "THIAGOS", "JULIANA", "GSOARES",
+    "GELINAS", "ALBERLE", "ALBERTI", "MACHADO", "FILLIPE",
+    "LEONARD", "PISTOLA", "XFARMAX", "PREMIUM", "ZFARMAX"
+  ];
+
+  const semanas = [
+    "",
+    "GILSONS", "GENNYSD", "ALVAROS",
+    "DIACONO", "IVANETE", "IVETTES", "JOSIANE"
+  ];
+
+  const hoje = new Date();
+  let diaSemana = hoje.getDay() + 1; // 1=domingo, 7=sábado
+  let dia = String(hoje.getDate()).padStart(2, "0");
+  let mes = String(hoje.getMonth() + 1).padStart(2, "0");
+
+  let diaMes =
+    parseInt(dia[0]) + parseInt(dia[1]) +
+    parseInt(mes[0]) + parseInt(mes[1]);
+
+  const premium = "PREMIUM";
+  const premiumInvertido = "MUIMERP";
+
+  const senha = 
+    premium.charAt(diaSemana - 1) +
+    dias[diaMes].charAt(diaSemana - 1) +
+    (parseInt(dia) + parseInt(mes)) +
+    semanas[diaSemana].charAt(diaSemana - 1) +
+    premiumInvertido.charAt(diaSemana - 1);
+
+
+  const resultadoDiv = document.querySelector(".SenhaResultado");
+  if (resultadoDiv) {
+    resultadoDiv.textContent = senha;
+  }
+
+  return senha;
+}
+function copiarSenha() {
+  // Garante que a senha já está no DOM
+  const senha = document.querySelector(".SenhaResultado").textContent;
+
+  if (!senha) return; // evita copiar se estiver vazio
+
+  navigator.clipboard.writeText(senha).then(() => {
+    const toast = document.getElementById("textsenha");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2000);
+  });
+}
+
+
+window.addEventListener("DOMContentLoaded", Senhahome);
+
+
+
