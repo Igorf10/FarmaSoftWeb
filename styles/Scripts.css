@@ -129,22 +129,23 @@ color: #e06d21;
 
 .toast {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;        /* centraliza verticalmente */
+  left: 50%;         /* centraliza horizontalmente */
+  transform: translateX(-50%) translateY(10px); /* animação inicial */
+  
   background: #3e73d6;
   color: #fff;
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0;
-  transform: translateY(10px);
-  transition: all .3s ease;
   pointer-events: none;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 .toast.fade-in {
   opacity: 1;
-  transform: translateY(0);
+ transform: translateX(-50%) translateY(0); /* animação ao aparecer */
 }
 
 
