@@ -72,3 +72,24 @@ itensMenu.forEach(item => {
     doubleClickAction(item);
   });
 });
+
+const btnSair = document.getElementById('btn-sair');
+const popup = document.getElementById('popup-sair');
+const btnSim = document.getElementById('confirmar-sair');
+const btnNao = document.getElementById('cancelar-sair');
+
+
+btnSair.addEventListener('click', () => {
+  popup.style.display = 'flex';
+});
+
+
+btnNao.addEventListener('click', () => {
+  popup.style.display = 'none';
+   location.reload();
+});
+
+
+btnSim.addEventListener('click', () => {
+  window.location.href = 'index.html'; 
+});
