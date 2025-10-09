@@ -72,7 +72,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe07 = document.querySelector('.Exe07');
   const Exe09 = document.querySelector('.Exe09');
   const Exe10 = document.querySelector('.Exe10');
-  const Exe11 = document.querySelector('.Exe11');
+  /*const Exe11 = document.querySelector('.Exe11');*/
   const Exe12 = document.querySelector('.Exe12');
   const Exe13 = document.querySelector('.Exe13');
   const Exe14 = document.querySelector('.Exe14');
@@ -256,3 +256,4 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     document.body.removeChild(link);
   }
 });
+
