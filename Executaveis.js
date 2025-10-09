@@ -64,6 +64,8 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
     toggle.classList.toggle('active');
   });
+});
+    
   const Exe01 = document.querySelector('.Exe01');
   const Exe02 = document.querySelector('.Exe02');
   const Exe03 = document.querySelector('.Exe03');
@@ -255,5 +257,6 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-});
+
+
 
