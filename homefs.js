@@ -157,4 +157,35 @@ function copiarSenha() {
 window.addEventListener("DOMContentLoaded", Senhahome);
 
 
+function verificarSessao() {
+  const caminho = window.location.pathname;
+  if (caminho.includes("index.html")) {
+    return; 
+  }
+
+  const usuarioLogado = localStorage.getItem("usuarioLogado");
+  const dataLogin = localStorage.getItem("dataLogin");
+
+  if (!usuarioLogado || !dataLogin) {
+
+    window.location.href = "index.html";
+    return;
+  }
+
+  const hoje = new Date().toDateString();
+
+  if (dataLogin !== hoje) {
+   
+    localStorage.removeItem("usuarioLogado");
+    localStorage.removeItem("dataLogin");
+    alert("⏰ A senha do dia mudou! Faça login novamente.");
+    window.location.href = "index.html";
+  }
+}
+
+// Só roda essa verificação em páginas protegidas (homefs.html, etc)
+if (window.location.pathname.includes("homefs.html")) {
+  window.onload = verificarSessao;
+  setInterval(verificarSessao, 60000); // checa a cada 60 segundos
+}
 

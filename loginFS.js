@@ -15,7 +15,7 @@ function geraSuperSenha() {
   ];
 
   const hoje = new Date();
-  let diaSemana = hoje.getDay() + 1; // 1=domingo, 7=sábado
+  let diaSemana = hoje.getDay() + 1;
   let dia = String(hoje.getDate()).padStart(2, "0");
   let mes = String(hoje.getMonth() + 1).padStart(2, "0");
 
@@ -35,39 +35,43 @@ function geraSuperSenha() {
   );
 }
 
+// Função de login
 function login() {
   const usuario = document.getElementById("usuario").value.trim();
-  const senha = document.getElementById("senha").value.trim();
-  const senhaCorreta = geraSuperSenha();
+  const senha = document.getElementById("senha").value.trim().toUpperCase();
+  const senhaCorreta = geraSuperSenha().toUpperCase();
   const msg = document.getElementById("mensagem");
 
-  const isUserCorrect = usuario === "Master.Farmax"; // ou use .toLowerCase() se quiser case-insensitive
+  const isUserCorrect = usuario === "Supfarmax";
   const isPassCorrect = senha === senhaCorreta;
 
   if (isUserCorrect && isPassCorrect) {
     msg.style.color = "green";
     msg.textContent = "✅ Login realizado com sucesso!";
+    
+    // Salva o login e a data do dia
+    const hoje = new Date();
+    localStorage.setItem("usuarioLogado", usuario);
+    localStorage.setItem("dataLogin", hoje.toDateString());
+    
     setTimeout(() => {
       window.location.href = "homefs.html";
     }, 1500);
     return;
   }
 
-  // agora tratamos as demais possibilidades separadamente
   if (!isUserCorrect && !isPassCorrect) {
     msg.style.color = "red";
-    msg.textContent = "❌ Usuário e senha incorretos. Tente novamente.";
+    msg.textContent = "❌ Usuário e senha incorretos.";
     return;
   }
 
   if (!isUserCorrect) {
     msg.style.color = "red";
-    msg.textContent = "❌ Usuário incorreto. Tente novamente.";
+    msg.textContent = "❌ Usuário incorreto.";
     return;
   }
 
-  // se chegou aqui, é porque a senha está incorreta (usuário certo)
   msg.style.color = "red";
-  msg.textContent = "❌ Senha incorreta. Tente novamente.";
+  msg.textContent = "❌ Senha incorreta.";
 }
-
