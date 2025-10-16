@@ -1,8 +1,7 @@
 // === Controle de Sessão Centralizado ===
 
-
 let ultimoAtivo = Date.now();
-const TEMPO_INATIVIDADE = 30 * 60 * 1000; 
+const TEMPO_INATIVIDADE = 20 * 60 * 1000; // 30 minutos
 let abaVisivel = true;
 
 function verificarSessao() {
@@ -31,27 +30,24 @@ function verificarSessao() {
   }
 
   // Inatividade → logoff
-  if (abaVisivel && Date.now() - ultimoAtivo > TEMPO_INATIVIDADE) {
+  const tempoSemAtividade = Date.now() - ultimoAtivo;
+  if (abaVisivel && tempoSemAtividade > TEMPO_INATIVIDADE) {
     localStorage.removeItem("usuarioLogado");
     localStorage.removeItem("dataLogin");
-    alert("⚠️ Sessão encerrada por inatividade (30 minutos sem uso da página).");
+    alert("⚠️ Sessão encerrada por inatividade.");
     window.location.href = "index.html";
   }
 }
 
 // Atualiza o tempo da última atividade
 function registrarAtividade() {
-  if (abaVisivel) {
-    ultimoAtivo = Date.now();
-  }
+  if (abaVisivel) ultimoAtivo = Date.now();
 }
 
 // Detecta mudança de visibilidade da aba
 document.addEventListener("visibilitychange", () => {
   abaVisivel = !document.hidden;
-  if (abaVisivel) {
-    ultimoAtivo = Date.now(); // reseta quando o usuário volta pra aba
-  }
+  if (abaVisivel) ultimoAtivo = Date.now(); // reseta quando o usuário volta pra aba
 });
 
 // Atualiza exatamente à meia-noite
@@ -71,16 +67,20 @@ function agendarRefreshMeiaNoite() {
 
 // === Executa apenas em páginas protegidas ===
 if (!window.location.pathname.includes("index.html")) {
-  window.onload = verificarSessao;
-
-  // Verifica sessão a cada minuto
-  setInterval(verificarSessao, 60000);
-
-  // Refresh automático à meia-noite
-  agendarRefreshMeiaNoite();
+  // Marca o primeiro momento de atividade
+  ultimoAtivo = Date.now();
 
   // Escuta atividades do usuário dentro da página
   ["mousemove", "keydown", "click", "scroll"].forEach(evt => {
     window.addEventListener(evt, registrarAtividade);
   });
+
+  // Checa sessão a cada minuto
+  setInterval(verificarSessao, 60000);
+
+  // Faz uma verificação inicial logo ao carregar
+  verificarSessao();
+
+  // Programa o refresh automático à meia-noite
+  agendarRefreshMeiaNoite();
 }
