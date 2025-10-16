@@ -104,7 +104,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
 
   Exe01.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/_FarmaxPDV.exe', 'FarmaxPDV4.3');
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/FarmaxPDV.exe', 'FarmaxPDV4.3');
   });
 
   Exe02.addEventListener('click', () => {
@@ -256,4 +256,5 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
