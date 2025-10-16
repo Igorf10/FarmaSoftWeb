@@ -1,14 +1,14 @@
-// === Controle de Sessão Centralizado ===//
-// Importar este arquivo em TODAS as páginas protegidas (exceto index.html)
+// === Controle de Sessão Centralizado ===
 
 
 let ultimoAtivo = Date.now();
-const TEMPO_INATIVIDADE = 30 * 60 * 1000; // 30 minutos em milissegundos
+const TEMPO_INATIVIDADE = 30 * 60 * 1000; 
+let abaVisivel = true;
 
-// === Refresher por inatividade á cada 30min ===//
 function verificarSessao() {
   const caminho = window.location.pathname;
 
+  // Evita rodar no login
   if (caminho.includes("index.html")) return;
 
   const usuarioLogado = localStorage.getItem("usuarioLogado");
@@ -21,6 +21,7 @@ function verificarSessao() {
 
   const hoje = new Date().toDateString();
 
+  // Dia mudou → força novo login
   if (dataLogin !== hoje) {
     localStorage.removeItem("usuarioLogado");
     localStorage.removeItem("dataLogin");
@@ -29,20 +30,31 @@ function verificarSessao() {
     return;
   }
 
-
-  if (Date.now() - ultimoAtivo > TEMPO_INATIVIDADE) {
+  // Inatividade → logoff
+  if (abaVisivel && Date.now() - ultimoAtivo > TEMPO_INATIVIDADE) {
     localStorage.removeItem("usuarioLogado");
     localStorage.removeItem("dataLogin");
-    alert("⚠️ Sessão encerrada por inatividade.");
+    alert("⚠️ Sessão encerrada por inatividade (30 minutos sem uso da página).");
     window.location.href = "index.html";
   }
 }
 
+// Atualiza o tempo da última atividade
 function registrarAtividade() {
-  ultimoAtivo = Date.now();
+  if (abaVisivel) {
+    ultimoAtivo = Date.now();
+  }
 }
 
-// === Função para atualizar a página exatamente à meia-noite ===
+// Detecta mudança de visibilidade da aba
+document.addEventListener("visibilitychange", () => {
+  abaVisivel = !document.hidden;
+  if (abaVisivel) {
+    ultimoAtivo = Date.now(); // reseta quando o usuário volta pra aba
+  }
+});
+
+// Atualiza exatamente à meia-noite
 function agendarRefreshMeiaNoite() {
   const agora = new Date();
   const amanha = new Date(agora);
@@ -57,16 +69,17 @@ function agendarRefreshMeiaNoite() {
   }, tempoRestante);
 }
 
+// === Executa apenas em páginas protegidas ===
 if (!window.location.pathname.includes("index.html")) {
   window.onload = verificarSessao;
 
-
+  // Verifica sessão a cada minuto
   setInterval(verificarSessao, 60000);
 
-
+  // Refresh automático à meia-noite
   agendarRefreshMeiaNoite();
 
-
+  // Escuta atividades do usuário dentro da página
   ["mousemove", "keydown", "click", "scroll"].forEach(evt => {
     window.addEventListener(evt, registrarAtividade);
   });
