@@ -80,7 +80,7 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });
 
   serviceEx14.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceIfood2/ServiceFarmaxIfood.exe', 'ServiceFarmaxIfood');
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceIfood/ServiceFarmaxIfood.exe', 'ServiceFarmaxIfood');
   });
 
 

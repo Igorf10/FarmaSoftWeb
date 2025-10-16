@@ -94,7 +94,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe29 = document.querySelector('.Exe29');
   const Exe30 = document.querySelector('.Exe30');
   const Exe31 = document.querySelector('.Exe31');
-  const Exe32 = document.querySelector('.Exe32');
+  //const Exe32 = document.querySelector('.Exe32');//
   const Exe33 = document.querySelector('.Exe33');
   const Exe34 = document.querySelector('.Exe34');
   const Exe35 = document.querySelector('.Exe35');
@@ -150,7 +150,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaciasAPP/FarmaciasAPP.exe', 'FarmaciasAPP')
   });
   Exe15.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD/FarmaxDanfe.exe', 'FarmaxIfood')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD/FarmaxIfood.exe', 'FarmaxIfood')
   });
 
   Exe16.addEventListener('click', () => {
@@ -215,9 +215,9 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDDA/FarmaxDDA.exe', 'FarmaxDDA')
   });
 
-  Exe32.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'FarmaxIfood')
-  });
+  /*Exe32.addEventListener('click', () => {
+    baixarArquivo('', 'FarmaxIfood')
+  });*/
 
   
   Exe33.addEventListener('click', () => {
@@ -244,7 +244,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     
   
   Exe37.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD3/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
   });
 
 
@@ -256,5 +256,4 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-
 
