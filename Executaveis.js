@@ -65,7 +65,6 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     toggle.classList.toggle('active');
   });
 });
-    
   const Exe01 = document.querySelector('.Exe01');
   const Exe02 = document.querySelector('.Exe02');
   const Exe03 = document.querySelector('.Exe03');
@@ -74,7 +73,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe07 = document.querySelector('.Exe07');
   const Exe09 = document.querySelector('.Exe09');
   const Exe10 = document.querySelector('.Exe10');
-  /*const Exe11 = document.querySelector('.Exe11');*/
+  const Exe11 = document.querySelector('.Exe11');
   const Exe12 = document.querySelector('.Exe12');
   const Exe13 = document.querySelector('.Exe13');
   const Exe14 = document.querySelector('.Exe14');
@@ -100,7 +99,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe34 = document.querySelector('.Exe34');
   const Exe35 = document.querySelector('.Exe35');
   const Exe36 = document.querySelector('.Exe36');
-  const Exe37 = document.querySelector('.Exe36');
+  const Exe37 = document.querySelector('.Exe37');
 
 
 
@@ -257,6 +256,4 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-
-
 

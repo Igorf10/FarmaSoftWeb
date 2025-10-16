@@ -38,11 +38,12 @@ function geraSuperSenha() {
 // Função de login
 function login() {
   const usuario = document.getElementById("usuario").value.trim();
+  const usuariomaster = "suporte"
   const senha = document.getElementById("senha").value.trim().toUpperCase();
   const senhaCorreta = geraSuperSenha().toUpperCase();
   const msg = document.getElementById("mensagem");
 
-  const isUserCorrect = usuario === "Supfarmax";
+  const isUserCorrect = usuario.toLowerCase() === usuariomaster;
   const isPassCorrect = senha === senhaCorreta;
 
   if (isUserCorrect && isPassCorrect) {
