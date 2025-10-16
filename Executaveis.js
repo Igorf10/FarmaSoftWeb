@@ -150,7 +150,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaciasAPP/FarmaciasAPP.exe', 'FarmaciasAPP')
   });
   Exe15.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'FarmaxIfood')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD/FarmaxDanfe.exe', 'FarmaxIfood')
   });
 
   Exe16.addEventListener('click', () => {
@@ -216,7 +216,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
 
   Exe32.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIFOOD/FarmaxIfood.exe', 'FarmaxIfood')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'FarmaxIfood')
   });
 
   
