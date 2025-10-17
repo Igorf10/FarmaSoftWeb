@@ -1,5 +1,5 @@
 let lastActivity = Date.now();
-const maxInactivity = 20 * 60 * 1000; 
+const maxInactivity = 5 * 60 * 1000; 
 
 function resetTimer() {
   lastActivity = Date.now();
@@ -24,3 +24,4 @@ function logout() {
 );
 
 setInterval(checkInactivity, 10000); 
+
