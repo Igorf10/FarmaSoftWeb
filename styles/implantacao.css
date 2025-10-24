@@ -90,7 +90,8 @@ body {
 
 .implantacao1,
 .implantacao2,
-.implantacao3 {
+.implantacao3,
+.implantacao4{
   width: 180px;
   height: 60px;
   background: linear-gradient(135deg, #1976D2, #0D47A1);
@@ -112,7 +113,8 @@ body {
 
 .implantacao1::before,
 .implantacao2::before,
-.implantacao3::before {
+.implantacao3::before,
+.implantacao4::before{
   content: "";
   display: inline-block;
   width: 24px;
@@ -125,13 +127,15 @@ body {
 
 .implantacao1:hover::before,
 .implantacao2:hover::before,
-.implantacao3:hover::before {
+.implantacao3:hover::before,
+.implantacao4:hover::before{
   transform: translateY(4px);
 }
 
 .implantacao1:hover,
 .implantacao2:hover,
-.implantacao3:hover {
+.implantacao3:hover,
+.implantacao4:hover{
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   background: linear-gradient(135deg, #2196F3, #0D47A1);
@@ -139,7 +143,8 @@ body {
 
 .implantacao1:active,
 .implantacao2:active,
-.implantacao3:active {
+.implantacao3:active,
+.implantacao4:active{
   transform: scale(0.96);
 }
 
@@ -155,3 +160,4 @@ body {
     text-align: center;
   }
 }
+
