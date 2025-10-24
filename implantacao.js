@@ -36,7 +36,7 @@ document.querySelectorAll('.grupo-banco').forEach(grupo => {
   });
 
   implantacao4.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxArquivos/releases/download/teste4/IMPLANTACAOS.BANCO4.rar', 'IMPLANTACAO.BANCO')
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/SNGPC/BANCOS.SNGPC.ZERADOS.rar', 'SNGPCv3.0.1.79')
   });
 
   implantacao5.addEventListener('click', () => {
@@ -63,4 +63,5 @@ document.querySelectorAll('.grupo-banco').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
