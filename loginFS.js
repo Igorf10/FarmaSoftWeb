@@ -35,10 +35,29 @@ function geraSuperSenha() {
   );
 }
 
-// Função de login
+// 👉 Mover os listeners para fora:
+window.addEventListener('DOMContentLoaded', () => {
+  const usuario = document.getElementById("usuario");
+  const senha = document.getElementById("senha");
+
+  usuario.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      senha.focus(); // vai pro campo de senha
+    }
+  });
+
+  senha.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // impede recarregar a página
+      login(); // chama a função de login direto
+    }
+  });
+});
+
 function login() {
   const usuario = document.getElementById("usuario").value.trim();
-  const usuariomaster = "suporte"
+  const usuariomaster = "suporte";
   const senha = document.getElementById("senha").value.trim().toUpperCase();
   const senhaCorreta = geraSuperSenha().toUpperCase();
   const msg = document.getElementById("mensagem");
@@ -49,12 +68,11 @@ function login() {
   if (isUserCorrect && isPassCorrect) {
     msg.style.color = "green";
     msg.textContent = "✅ Login realizado com sucesso!";
-    
-    // Salva o login e a data do dia
+
     const hoje = new Date();
     localStorage.setItem("usuarioLogado", usuario);
     localStorage.setItem("dataLogin", hoje.toDateString());
-    
+
     setTimeout(() => {
       window.location.href = "homefs.html";
     }, 1500);
