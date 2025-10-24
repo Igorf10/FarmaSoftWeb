@@ -202,3 +202,4 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
