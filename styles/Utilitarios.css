@@ -78,7 +78,13 @@ body {
   gap: 25px;         /* espaçamento entre botões */
 
 }
-
+.linha-botoes {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espaço entre select e botão */
+  margin-top: 8px;
+  flex-wrap: wrap; /* Caso a tela seja pequena, quebra linha bonitinho */
+}
 
 /* ===== BOTÕES ===== */
 .utilit01,
@@ -118,6 +124,7 @@ body {
   width: 250px; 
   height: 40px; 
   background: linear-gradient(135deg, #1976D2, #0D47A1);
+  background-color: #58595c;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   display: flex;
@@ -125,7 +132,7 @@ body {
   align-items: center;
   gap: 8px;
   clear: both; 
-  color: rgb(15, 15, 15);
+  color: rgb(250, 249, 249);
   font-size: 0.95rem;
   font-weight: bold;
   text-align: center;
@@ -174,6 +181,29 @@ body {
   text-decoration: none;
   position: relative;
 }
+
+#Pesquisar3{
+  width: 150px; 
+  height: 40px; 
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  clear: both;
+  vertical-align: middle;
+  color: rgb(245, 245, 245);
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
 
 #result {
   margin-top: 20px;   /* espaço entre pesquisa e resultado */
