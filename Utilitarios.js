@@ -285,42 +285,82 @@ function Pesquisar2() {
 }
 
 
+    function Pesquisar3(event) {
+      const botao = event.target;
+      const select = botao.closest('.linha-botoes').querySelector('select');
+      const opcao = select.value;
+    
 
+      if (!opcao) {
+        alert("Selecione uma opção antes do download!");
+        return;
+      }
 
-
-  const utilit01 = document.querySelector('.utilit01');
-  const utilit02 = document.querySelector('.utilit02');
-  const utilit03 = document.querySelector('.utilit03');
-  const utilit04 = document.querySelector('.utilit04');
-  const utilit05 = document.querySelector('.utilit05');
-  const utilit06 = document.querySelector('.utilit06');
-  const utilit07 = document.querySelector('.utilit07');
-  const utilit08 = document.querySelector('.utilit08');
-  const utilit09 = document.querySelector('.utilit09');
-  const utilit10 = document.querySelector('.utilit10');
-  const utilit11 = document.querySelector('.utilit11');
-  const utilit12 = document.querySelector('.utilit12');
-
-
-
-
-
-  utilit01.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios/Dll5.0.rar', 'Dll5.0');
-  });
-
-  utilit02.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios1/Dll.Comunicador.rar', 'Dll.Comunicador');
-  });
-
-  
-  utilit03.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios2/Dll.Instalador.rar', 'Dll.Instalador')
-  });
-
-  utilit04.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios3/DllTodas.rar', 'DllTodas')
-  });
+      const downloads = {
+        // ELGIN
+        i7: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilizarios6/i7.v172.06-2021.exe",
+        i8: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios7/i8.v717.06-2021.exe",
+        i9: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios8/i9.v173.06-2021.exe",
+    
+        // EPSON
+        t20: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios10/APD_510_T20.exe",
+        t20x: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios11/APD_601_T20X.exe",
+    
+        // BEMATECH
+        MP100S: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios12/BEMA_MP.100S_TH_x64.exe",
+        MP2500: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUilitarios13/Bematech.User.Setup.v2.5.1_x64.exe",
+        MP4000: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios14/BematoolPro.exe",
+        MP4200HS: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios15/ELGIN.Printer.Driver_v-1.7.7.exe",
+        MP4200TH: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilisarios15/Bematech.MP4200.TH.-.Driver.Windows.Spooler.x86.v5.0.04.-.32bits.exe",
+        MP4200ADV: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios16/Bematech.MP4200.ADV.-.Driver.Windows.Spooler.x64.v5.0.04.-.64bits.exe",
+    
+        // SWEDA
+        SL250: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios17/Driver_Sweda_SI-250.zip",
+        SL300: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios18/Driver_Sweda_Si300.zip",
+        SL300X: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios19/Driver.SI-300X.Win.10.ZIP",
+    
+        // DARUMA
+        DR700: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios20/Driver_Daruma_DR700.zip",
+        DR800: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios21/Driver_Daruma_DR800.zip",
+    
+        // ARGOX
+        Argox: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios22/Argox_2024.1_M-0.exe",
+    
+        // GOLDENTEC
+        Goldentec: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios23/IMP.Goldentec.GT710.rar",
+    
+        // DIEBOLD
+        Diebold: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios14/Diebold.rar",
+    
+        // TOMATE
+        Tomate: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios24/posprinter.POS80.driver.2024.01.11.1.exe"
+      };
+    
+      // verifica se o valor existe no dicionário
+      const linkDownload = downloads[opcao];
+      if (!linkDownload) {
+        alert("Download não encontrado para essa opção!");
+        return;
+      }
+    
+      // dispara o download
+      baixarArquivo(linkDownload, opcao);
+    }
+    
+    // função genérica de download
+    function baixarArquivo(url, nomeArquivo) {
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = nomeArquivo;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    
+    // adiciona evento para todos os botões com id Pesquisar3
+    document.querySelectorAll('#Pesquisar3').forEach(botao => {
+      botao.addEventListener('click', Pesquisar3);
+    });
 
   utilit05.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios4/Dll.Libeay.rar', 'Dll.Libeay')
@@ -359,5 +399,6 @@ function Pesquisar2() {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
