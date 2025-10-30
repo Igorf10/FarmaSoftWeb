@@ -205,7 +205,8 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxRealocacao/FarmaxRealocacao.exe', 'FarmaxRealocacao')
   });
   Exe29.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxRecarga/FarmaxRecarga.exe', 'FarmaxRecarga')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxRecarga/FARMAXRECARGA.rar', 'FarmaxRecarga')
+
   });
   Exe30.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSintegra/FarmaxSintegra2024.exe', 'Sintegra')
@@ -256,6 +257,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
