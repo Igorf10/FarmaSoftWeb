@@ -142,6 +142,29 @@ body {
   position: relative;
 }
 
+#opcoes2
+{
+  width: 250px; 
+  height: 40px; 
+  background: linear-gradient(135deg, #1976D2, #0D47A1);
+  background-color: #58595c;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  clear: both; 
+  color: rgb(250, 249, 249);
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
 #Pesquisar{
   width: 250px; 
   height: 40px; 
@@ -398,4 +421,5 @@ body {
     max-width: 300px;           /* limite de largura */
     text-align: center;         /* centraliza o conteúdo */
   }
+
 }
