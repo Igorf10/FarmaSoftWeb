@@ -195,7 +195,7 @@ body {
   align-items: center;
   gap: 8px;
   clear: both; 
-  color: rgb(15, 15, 15);
+  color: rgb(245, 241, 241);
   font-size: 0.95rem;
   font-weight: bold;
   text-align: center;
@@ -423,3 +423,4 @@ body {
   }
 
 }
+
