@@ -362,43 +362,7 @@ function Pesquisar2() {
       botao.addEventListener('click', Pesquisar3);
     });
 
-  utilit05.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios4/Dll.Libeay.rar', 'Dll.Libeay')
-  });
 
-  utilit06.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios5/Dll.PDV.rar', 'Dll.PDV')
-  });
-
-  utilit07.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilizarios6/DriverElgin.rar', '/DriverElgin')
-  });
-
-  utilit08.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios7/DriverEpson.rar', 'DriverEpson')
-  });
-
-  utilit09.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios8/Driver.Bematech.rar', '/Driver.Bematech')
-  });
-  utilit10.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios10/SWEDA.rar', 'SWEDA')
-  });
-  utilit11.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios11/DARUMA.rar', 'DARUMA')
-  });
-  utilit12.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios12/Argox.rar', 'Argox')
-  });
-
-  function baixarArquivo(url, nomeArquivo) {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = nomeArquivo;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
 
 
 
