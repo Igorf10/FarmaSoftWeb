@@ -546,3 +546,21 @@ nav.menu-lateral:hover ~ main.conteudo {
 #menu-lateral.fixo .logoFS {
   justify-content: center !important;
 }
+
+.site {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+.bola {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: background-color 0.3s;
+  }
+.verde { background-color: #2ecc71; }  /* online */
+.vermelha { background-color: #e74c3c; }  /* offline */
+
+
