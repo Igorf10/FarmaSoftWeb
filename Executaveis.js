@@ -113,11 +113,11 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
   
   Exe03.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor/_Gestor.exe', 'Gestor4.3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/Gestor.exe', 'Gestor4.3')
   });
 
   Exe04.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor2/Gestor.exe', 'Gestor4.2')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV2/Gestor.exe', 'Gestor4.2')
   });
 
   Exe05.addEventListener('click', () => {
@@ -257,6 +257,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
