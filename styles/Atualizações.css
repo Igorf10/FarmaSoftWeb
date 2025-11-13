@@ -83,7 +83,8 @@ body {
 .Att01,
 .Att02,
 .Att03,
-.Att04{
+.Att04,
+.Att05{
   width: 180px; 
   height: 60px; 
   background: linear-gradient(135deg, #1976D2, #0D47A1);
@@ -107,7 +108,8 @@ body {
 .Att01::before,
 .Att02::before,
 .Attl03::before,
-.Att04::before{
+.Att04::before,
+.Att05::before{
   content: "";
   display: inline-block;
   width: 24px;
@@ -159,6 +161,7 @@ body {
 .Att01:hover::before,
 .Att02:hover::before,
 .Att03:hover::before,
+.Att05:hover::before,
 .Attl04:hover::before
  {
   transform: translateY(4px); 
@@ -168,6 +171,7 @@ body {
 .Att01:hover,
 .Att02:hover,
 .Att03:hover,
+.Att05:hover,
 .Att04:hover{
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -177,6 +181,7 @@ body {
 
 .Att01:active,
 .Att02:active,
+.Att05:active,
 .Att03:active,
 .Attl04:active{
   transform: scale(0.96);
@@ -196,3 +201,4 @@ body {
     text-align: center;         /* centraliza o conteúdo */
   }
 }
+
