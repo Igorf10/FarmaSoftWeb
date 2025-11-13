@@ -16,9 +16,10 @@ document.querySelectorAll('.grupo-att').forEach(grupo => {
   const Att02 = document.querySelector('.Att02');
   const Att03 = document.querySelector('.Att03');
   const Att04 = document.querySelector('.Att04');
+  const Att05 = document.querySelector('.Att05');
 
   Att01.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Farmax4.3.0.1/Farmax4.3.0.1.rar', 'v4.3.0.1');
+    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Farmax4.3.0.1/Farmax4.3.0.1.zip', 'v4.3.0.1');
   });
 
   Att03.addEventListener('click', () => {
@@ -26,11 +27,15 @@ document.querySelectorAll('.grupo-att').forEach(grupo => {
   });
 
     Att02.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base4.3.0.1/BASEFARMAX5.zip', 'Base v4.3.0.1');
+    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base4.3.0.1/BASEFARMAX5.zip', 'Base v4.3.0.1 - 5.0');
   });
 
   Att04.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base4.2.0.3/BASEFARMAXFB50.zip', 'Base v4.2.0.3');
+  });
+
+  Att05.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base4.3.0.1/BASEFARMAX.zip', 'Base v4.3.0.1 - 2.5');
   });
 
 
@@ -42,6 +47,7 @@ document.querySelectorAll('.grupo-att').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
