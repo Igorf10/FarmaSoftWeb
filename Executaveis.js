@@ -252,7 +252,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     
   
   Exe38.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSuporte/SuporteFarmax.exe', 'Exe.SuporteFarmax')
   });
 
   function baixarArquivo(url, nomeArquivo) {
@@ -263,6 +263,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
