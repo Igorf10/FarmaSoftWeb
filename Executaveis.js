@@ -100,6 +100,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe35 = document.querySelector('.Exe35');
   const Exe36 = document.querySelector('.Exe36');
   const Exe37 = document.querySelector('.Exe37');
+  const Exe38 = document.querySelector('.Exe38');
 
 
 
@@ -248,6 +249,11 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
   });
 
+    
+  
+  Exe38.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+  });
 
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
@@ -257,6 +263,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
