@@ -61,6 +61,7 @@ function baixarArquivo(url, nomeArquivo) {
   const install31 = document.querySelector('.install31');
   const install32 = document.querySelector('.install32');
   const install33 = document.querySelector('.install33');
+  const install34 = document.querySelector('.install34');
 
 
   install01.addEventListener('click', () => {
@@ -191,6 +192,10 @@ function baixarArquivo(url, nomeArquivo) {
   install33.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
   });
+  
+  install34.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
+  });
 
 
 
@@ -202,4 +207,5 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
 
