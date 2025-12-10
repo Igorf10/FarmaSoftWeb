@@ -194,7 +194,7 @@ function baixarArquivo(url, nomeArquivo) {
   });
   
   install34.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSuporte/SuporteFarmax.exe', 'SuporteFarmax')
   });
 
 
@@ -207,5 +207,6 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
