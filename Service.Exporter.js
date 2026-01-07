@@ -12,7 +12,7 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });
 
 
-  //const serviceEx01 = document.querySelector('.serviceEx01');//
+  const serviceEx01 = document.querySelector('.serviceEx01');
   const serviceEx02 = document.querySelector('.serviceEx02');
   const serviceEx03 = document.querySelector('.serviceEx03');
   const serviceEx04 = document.querySelector('.serviceEx04');
@@ -28,9 +28,9 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   const serviceEx14 = document.querySelector('.serviceEx14');
 
 
-  /*serviceEx01.addEventListener('click', () => {
+  serviceEx01.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceIfood2/ServiceFarmaxIfood.exe', 'ServiceFarmaxIfood');
-  });*/
+  });
 
   serviceEx02.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceFarmaciasAPP/ServiceFarmaxFarmaciasAPP.exe', 'ServiceFarmaciasAPP');
@@ -93,6 +93,7 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
     document.body.removeChild(link);
   }
 });
+
 
 
 
