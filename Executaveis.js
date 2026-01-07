@@ -104,21 +104,22 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
 
   Exe01.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/FarmaxPDV.exe', 'FarmaxPDV4.3');
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/FarmaxPDV.exe', 'FarmaxPDV5.0');
   });
 
   Exe02.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV2/FarmaxPDV.exe', 'FarmaxPDV4.2');
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV2/FarmaxPDV.exe', 'FarmaxPDV4.3');
   });
 
   
   Exe03.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV/Gestor.exe', 'Gestor4.3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor/Gestor.exe', 'Gestor5.0')
   });
 
   Exe04.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV2/Gestor.exe', 'Gestor4.2')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor2/Gestor.exe', 'Gestor4.3')
   });
+
 
   Exe05.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/AtualizardorFarmax/AtualizadorFarmax.exe', 'AtualizadorFarmax')
@@ -257,6 +258,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
