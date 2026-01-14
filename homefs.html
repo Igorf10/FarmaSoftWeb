@@ -101,11 +101,11 @@
               <div class="card" style="background-color: rgb(241, 241, 241);">
                   <h3 style="color: rgb(9, 11, 12);" class="bi bi-newspaper"> Atualizações</h3>
                   <div class="info">
-                  <p style="color: azure;">FARMAXPDV - Versão atual 4.3.0.1/Ultima at:21.12.2025</p>
+                  <p style="color: azure;">FARMAXPDV - Versão atual 5.0.0.0/Ultima at:14.01.2026</p>
                        <br>
                   <p style="color: azure;">FARMAXIFOOD - Versão atual 1.0.0.21/Ultima at:13.10.25</p>
                        <br>
-                  <p style="color: azure;">FARMAXSNGPC - Versão atual 3.0.1.80/Ultima at:04.12.25</p>
+                  <p style="color: azure;">FARMAXSNGPC - Versão atual 3.0.1.81/Ultima at:14.01.26</p>
                        <br>
                   <p style="color: azure;">FARMAXDANFE - Versão atual 4.0.0.17/Ultima at:16.10.25</p>
                   </div>
@@ -113,114 +113,12 @@
               <div class="card" style="background-color:rgb(243, 243, 243)">
                   <h3 class="bi bi-info-circle-fill"> Informativo</h3>
                   <div class="info2">
-                  <p> - - Anydesk abrindo somente uma janela por maquina.</p>
-                  <p> - - QUINZENA 15/12.</p>
+                  <p> - - Anydesk abrindo somente uma janela, remova á chave de licença e insira novamente.</p>
                   </div>                  
               </div>
           </div>
-         <div class="notas">
-            <h1>
-            <i class="bi bi-cloud-check"></i> Status dos Sites
-            </h1>
-            
-            <br>
-            <div id="lista-sites"></div>
-            <br>
-            <p style="color: red; font-weight: bold; font-size: 10px; margin-top: 10px;">
-              ⚠️ Não refere-se ao WebService real da SEFAZ
-            </p>
-
-
-   
-            <script>
-                  const sites = [
-                  { nome: "SNGPC - Anvisa", url: "https://sngpc.anvisa.gov.br" },
-                  { nome: "Farmácia Popular", url: "https://farmaciapopular-portal.saude.gov.br/farmaciapopular-portal/login.jsf" },
-                  { nome: "Sintegra RJ", url: "https://sucief-sincad-web.fazenda.rj.gov.br/sincad-web/index.jsf" },
-                  { nome: "Portal NFC-e SEFAZ-RJ (consulta QR) ⚠️", url: "https://consultadfe.fazenda.rj.gov.br/consultaNFCe/QRCode?" }
-
-                  
-
-                  
-                  ];
-
-                  // Cria dinamicamente os elementos
-                  const container = document.getElementById('lista-sites');
-                  sites.forEach((site, i) => {
-                  const div = document.createElement('div');
-                  div.className = 'site';
-                  div.innerHTML = `
-                  <div id="bola-${i}" class="bola"></div>
-                  <a href="${site.url}" target="_blank">${site.nome}</a>
-                  <span id="texto-${i}">Verificando...</span>
-                  `;
-                  container.appendChild(div);
-                  });
-
-                  // Verifica via proxy AllOrigins
-                  async function verificarComProxy(url) {
-                  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-                  const resposta = await fetch(proxyUrl);
-                  if (!resposta.ok) throw new Error('Erro no proxy');
-                  const dados = await resposta.json();
-                  if (dados.contents && dados.contents.length > 0) return true;
-                  throw new Error('Sem conteúdo');
-                  }
-
-                  // Fallback: tentativa direta com timeout
-                  async function verificarDireto(url, tempoLimite = 5000) {
-                  const controller = new AbortController();
-                  const timeout = setTimeout(() => controller.abort(), tempoLimite);
-                  try {
-                  const resposta = await fetch(url, { method: 'GET', signal: controller.signal, mode: 'no-cors' });
-                  clearTimeout(timeout);
-                  return true; // conseguiu conectar
-                  } catch {
-                  clearTimeout(timeout);
-                  return false;
-                  }
-                  }
-
-                  // Função principal de verificação
-                  async function verificarStatus(url, id) {
-                  const bola = document.getElementById(`bola-${id}`);
-                  const texto = document.getElementById(`texto-${id}`);
-
-                  try {
-                  const onlineViaProxy = await verificarComProxy(url);
-                  if (onlineViaProxy) {
-                        bola.className = 'bola verde';
-                        texto.textContent = 'Online';
-                        return;
-                  }
-                  } catch {
-                  // Se falhou no proxy, tenta direto
-                  const onlineDireto = await verificarDireto(url);
-                  if (onlineDireto) {
-                        bola.className = 'bola verde';
-                        texto.textContent = 'Online';
-                        return;
-                  }
-                  }
-
-
-                  bola.className = 'bola vermelha';
-                  texto.textContent = 'Offline ou bloqueando requisições';
-                  }
-
-
-                  function verificarTodos() {
-                  sites.forEach((s, i) => verificarStatus(s.url, i));
-                  }
-
-                  verificarTodos();
-                  setInterval(verificarTodos, 30000);
-                  </script>
-            
-            </div>
-
-
-            
+          <br>
+          <br>
           <!--NOTAS-->
 <div class="notas">
   <h1>
@@ -745,12 +643,7 @@
    <div class="install0">
      <h1></h1>
      <div class="install31">MicroSip</div>
-   </div>
-
-       <div class="install0">
-     <h1></h1>
-     <div class="install34">SuporteFarmax</div>
-   </div>
+   </div>  
  </div>
 </div>
 <script src="auth.js"></script>
@@ -788,7 +681,13 @@
 
       <div class="Att0">
       <h1></h1>
-      <div class="Att02">v5.0.0.0(Base)</div>
+      <div class="Att02">v5.0.0.0(Base5.0)</div>
+    </div>
+
+    
+    <div class="Att0">
+      <h1></h1>
+      <div class="Att06">v5.0.0.0(Base2.5)</div>
     </div>
  </div>
 </div>
@@ -808,7 +707,12 @@
 
       <div class="Att0">
       <h1></h1>
-      <div class="Att04">v4.3.0.1(Base)</div>
+      <div class="Att04">v4.3.0.1(Base5.0)</div>
+    </div>
+
+    <div class="Att0">
+      <h1></h1>
+      <div class="Att05">v4.3.0.1(Base2.5)</div>
     </div>
   </div>
 </div>
@@ -893,7 +797,7 @@
  <div class="exe-container hidden"> 
     <div class="Exe0">
       <h1></h1>
-      <div class="Exe33">v3.0.1.80(04.12.25)</div>
+      <div class="Exe33">v3.0.1.79(23.10.25)</div>
     </div>
  </div>
 </div>
@@ -908,12 +812,10 @@
  <div class="exe-container hidden"> 
     <div class="Exe0">
       <h1></h1>
-      <div class="Exe05">v3.0.0.0(28.11.25)</div>
+      <div class="Exe05">v3.0.0.0(07.04.25)</div>
     </div>
  </div>
 </div>
-
-    
 <!--InseriVersao-->
     <div class="grupo-executaveis">
       <div class="grupo-header">
@@ -925,10 +827,25 @@
  <div class="exe-container hidden"> 
     <div class="Exe0">
       <h1></h1>
-      <div class="Exe07">v3.5.0.0(28.11.25)</div>
+      <div class="Exe07">v3.5.0.0(05.06.25)</div>
     </div>
  </div>
 </div>
+<!--FARMAXSUPORTE-->
+<div class="grupo-executaveis">
+      <div class="grupo-header">
+          <h1 class="title">FarmaxSuporte</h1>
+          <div class="bi bi-filetype-exe" id="banco-icon2"></div>
+          
+          <div class="toggle-icon3 bi bi-plus"></div>
+      </div>  
+     <div class="exe-container hidden"> 
+        <div class="Exe0">
+          <h1></h1>
+          <div class="Exe38">v1.0.0.0(28.11.25)</div>
+       </div>
+    </div>
+  </div>
 <!--IBEXPERT-->
     <div class="grupo-executaveis">
       <div class="grupo-header">
@@ -987,7 +904,7 @@
 
         <div class="Exe0">
           <h1></h1>
-          <div class="Exe12">v4.0.0.17(17.10.25)</div>
+          <div class="Exe12">v4.0.0.17(16.10.25)</div>
         </div>
      </div>
     </div> 
@@ -1334,12 +1251,13 @@
           <div class="serviceEx14">v1.0.0.20(03.12.25)</div>
         </div>
 
-        <div class="service0">
+        <!--<div class="service0">
             <h1></h1>
           <div class="serviceEx01">v1.0.0.20(07.10.25)</div>  
-          </div>-
+          </div>-->
     </div>
   </div>
+
     <div class="grupo-servicos">
       <div class="grupo-header">
           <h1 class="title">FarmaciasApp</h1>
@@ -1409,13 +1327,13 @@
      <div class="servicos-container"> 
         <div class="service0">
           <h1></h1>
-          <div class="serviceEx05">v1.0.0.0(29.10.25)</div>
+          <div class="serviceEx05">v1.0.0.0(11.11.25)</div>
         </div>
 
-        <div class="service0">
+       <!-- <div class="service0">
           <h1></h1>
-          <div class="serviceEx06">v1.0.0.0(12.08.25)</div>
-        </div>
+          <div class="serviceEx06">v1.0.0.0(11.11.25)</div>
+        </div>-->
     </div>
   </div>
 
@@ -1444,12 +1362,12 @@
      <div class="servicos-container"> 
         <div class="service0">
           <h1></h1>
-          <div class="serviceEx08">v1.0.0.0(29.10.25)</div>
+          <div class="serviceEx08">v1.0.0.0(08.01.26)</div>
         </div>
 
         <div class="service0">
           <h1></h1>
-          <div class="serviceEx09">v1.0.0.0(30.07.25)</div>
+          <div class="serviceEx09">v1.0.0.0(11.11.25)</div>
         </div>
     </div>
   </div>
@@ -1555,7 +1473,6 @@
     </div>
  </div>
 </div>
-
 <!--IMPRESSORAS-->
 <div class="grupo-utilit">
       <div class="grupo-header">  
@@ -1705,8 +1622,7 @@
                         </div>
                      </div>
                   </div>
-
-                                                      
+                                                    
                                     
             <div class="utilit0">
                   <h1></h1>
@@ -1721,6 +1637,7 @@
                         <div type="button" value="TOMATE" id="Pesquisar3" class="download" onclick="Pesquisar3()">
                               TOMATE
                         </div>
+                        <br>
                      </div>
                   </div>
                 </div>
@@ -19521,6 +19438,7 @@ COMMIT WORK;
 
   <script src="auth.js"></script>
   <script src="Scripts.js"></script>
+  <script src="dll.js"></script>
 </section>
   </main>
 
@@ -19539,28 +19457,6 @@ COMMIT WORK;
 <script src="homefs.js"></script>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
