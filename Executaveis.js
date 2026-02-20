@@ -137,7 +137,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas22/FarmaxMonitorNfe.exe', 'MonitordeNotas22')
   });
 
-  /Exe11.addEventListener('click', () => {
+  Exe11.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe1/FarmaxDanfe.exe', 'Danfe17v2')
   });
   
@@ -258,6 +258,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
