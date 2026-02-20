@@ -142,7 +142,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
   
   Exe12.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe2/FarmaxDanfe.exe', 'Danfe20')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe2/FarmaxDanfe.exe', 'Danfe17')
   });
   Exe13.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxEtiquetas/FarmaxEtiquetas.1.4.0.exe', 'FarmaxEtiquetas')
@@ -258,6 +258,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
