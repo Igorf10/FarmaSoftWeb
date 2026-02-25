@@ -125,7 +125,8 @@ body {
 .install31,
 .install32,
 .install33,
-.install34{
+.install34,
+.install35{
   width: 180px; 
   height: 60px; 
   background: linear-gradient(135deg, #1976D2, #0D47A1);
@@ -179,7 +180,8 @@ body {
 .install31::before,
 .install32::before,
 .install33::before,
-.install34::before{
+.install34::before,
+.install35::before{
   content: "";
   display: inline-block;
   width: 24px;
@@ -285,7 +287,8 @@ body {
 .install31:hover::before,
 .install32:hover::before,
 .install33:hover::before,
-.install34:hover::before
+.install34:hover::before,
+.install35:hover::before
  {
   transform: translateY(4px); 
 }
@@ -324,7 +327,8 @@ body {
 .install31:hover,
 .install32:hover,
 .install33:hover,
-.install34:hover{
+.install34:hover,
+.install35:hover{
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #2196F3, #0D47A1);
@@ -364,7 +368,8 @@ body {
 .install31:active,
 .install32:active,
 .install33:active,
-.install34:active{
+.install34:active,
+.install35:active{
   transform: scale(0.96);
 }
 
@@ -382,4 +387,5 @@ body {
     text-align: center;         /* centraliza o conteúdo */
   }
 }
+
 
