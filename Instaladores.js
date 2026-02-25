@@ -46,7 +46,6 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
   const install31 = document.querySelector('.install31');
   const install32 = document.querySelector('.install32');
   const install33 = document.querySelector('.install33');
-  const install34 = document.querySelector('.install34');
   const install35 = document.querySelector('.install35');
 
 
@@ -178,17 +177,10 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
   install33.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
   });
-  
-  install34.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSuporte/SuporteFarmax.exe', 'SuporteFarmax')
-  });
 
  install35.addEventListener('click', ()=>{
   baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird5/Firebird-5.0.0.1306-0-windows-x86.exe', 'Firebird5.0.0')
  });
-
-
-
 
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
@@ -198,9 +190,3 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-
-
-
-
-
-
