@@ -62,6 +62,7 @@ function baixarArquivo(url, nomeArquivo) {
   const install32 = document.querySelector('.install32');
   const install33 = document.querySelector('.install33');
   const install34 = document.querySelector('.install34');
+  const install35 = document.querySelector('.install35');
 
 
   install01.addEventListener('click', () => {
@@ -197,6 +198,11 @@ function baixarArquivo(url, nomeArquivo) {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSuporte/SuporteFarmax.exe', 'SuporteFarmax')
   });
 
+ install35.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/SuporteRemoto3/MicroSIP.rar', 'MicroSIP')
+ });
+
+
 
 
   function baixarArquivo(url, nomeArquivo) {
@@ -207,6 +213,7 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
