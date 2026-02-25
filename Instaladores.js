@@ -199,7 +199,7 @@ function baixarArquivo(url, nomeArquivo) {
   });
 
  install35.addEventListener('click', ()=>{
-  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/SuporteRemoto3/MicroSIP.rar', 'MicroSIP')
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird5/Firebird-5.0.0.1306-0-windows-x86.exe', 'Firebird5.0.0')
  });
 
 
@@ -213,6 +213,7 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
