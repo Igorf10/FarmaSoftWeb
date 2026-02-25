@@ -12,22 +12,7 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
   });
 });
 
-// Downloads automáticos
-document.querySelectorAll('.implantacao').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    const url = `https://github.com/Igorf10/FarmaxArquivos/releases/download/teste${index + 1}/IMPLANTACAOS.BANCO${index + 1}.rar`;
-    baixarArquivo(url, 'IMPLANTACAO.BANCO');
-  });
-});
 
-function baixarArquivo(url, nomeArquivo) {
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = nomeArquivo;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
   const install01 = document.querySelector('.install01');
   const install02 = document.querySelector('.install02');
   const install03 = document.querySelector('.install03');
@@ -213,6 +198,7 @@ function baixarArquivo(url, nomeArquivo) {
     link.click();
     document.body.removeChild(link);
   }
+
 
 
 
