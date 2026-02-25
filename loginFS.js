@@ -1,39 +1,13 @@
-function geraSuperSenha() {
-  const dias = [
-    "",
-    "",
-    "ALBERTO", "GILVETE", "GILBERT", "ANGELOS",
-    "MARCELO", "MATHEUS", "THIAGOS", "JULIANA", "GSOARES",
-    "GELINAS", "ALBERLE", "ALBERTI", "MACHADO", "FILLIPE",
-    "LEONARD", "PISTOLA", "XFARMAX", "PREMIUM", "ZFARMAX"
-  ];
-
-  const semanas = [
-    "",
-    "GILSONS", "GENNYSD", "ALVAROS",
-    "DIACONO", "IVANETE", "IVETTES", "JOSIANE"
-  ];
-
+function gerarSenhaData() {
   const hoje = new Date();
-  let diaSemana = hoje.getDay() + 1;
-  let dia = String(hoje.getDate()).padStart(2, "0");
-  let mes = String(hoje.getMonth() + 1).padStart(2, "0");
 
-  let diaMes =
-    parseInt(dia[0]) + parseInt(dia[1]) +
-    parseInt(mes[0]) + parseInt(mes[1]);
+  const dia = hoje.getDate().toString().padStart(2, '0');
+  const mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+  const ano = hoje.getFullYear().toString();
 
-  const premium = "PREMIUM";
-  const premiumInvertido = "MUIMERP";
-
-  return (
-    premium.charAt(diaSemana - 1) +
-    dias[diaMes].charAt(diaSemana - 1) +
-    (parseInt(dia) + parseInt(mes)) +
-    semanas[diaSemana].charAt(diaSemana - 1) +
-    premiumInvertido.charAt(diaSemana - 1)
-  );
+  return `F${dia}${mes}${ano}S`;
 }
+
 
 // 👉 Mover os listeners para fora:
 window.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +33,7 @@ function login() {
   const usuario = document.getElementById("usuario").value.trim();
   const usuariomaster = "suporte";
   const senha = document.getElementById("senha").value.trim().toUpperCase();
-  const senhaCorreta = geraSuperSenha().toUpperCase();
+  const senhaCorreta = gerarSenhaData().toUpperCase();
   const msg = document.getElementById("mensagem");
 
   const isUserCorrect = usuario.toLowerCase() === usuariomaster;
