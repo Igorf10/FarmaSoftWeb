@@ -46,7 +46,7 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });
 
   serviceEx05.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClient2/ExporterClient.exe', 'ExporterClient11.11.25')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClient3/ExporterClient.exe', 'ExporterClient12.03.26')
   });
 
   /*serviceEx06.addEventListener('click', () => {
@@ -69,7 +69,7 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });
 
   serviceEx11.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxServer1/ExporterServer.exe', 'ExporterServer25.06')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxServer2/ExporterServer.exe', 'ExporterServer12.03')
   });
 
   serviceEx12.addEventListener('click', () => {
