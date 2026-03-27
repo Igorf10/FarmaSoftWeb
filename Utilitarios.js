@@ -305,6 +305,7 @@ function Pesquisar2() {
         // EPSON
         t20: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios10/APD_510_T20.exe",
         t20x: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios11/APD_601_T20X.exe",
+        LX350: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios26/epson.LX350.exe",
     
         // BEMATECH
         MP100S: "https://github.com/Igorf10/FarmaxUtilitarios/releases/download/FarmaxUtilitarios12/BEMA_MP.100S_TH_x64.exe",
