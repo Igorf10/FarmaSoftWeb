@@ -223,7 +223,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
   
   Exe33.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/ExeSNGPC/Sngpc.exe', 'Exe.SNGPC')
+    baixarArquivo('https://farmax.far.br/download/Sngpc.exe', 'Exe.SNGPC')
   });
 
   
