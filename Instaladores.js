@@ -46,7 +46,15 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
   const install31 = document.querySelector('.install31');
   const install32 = document.querySelector('.install32');
   const install33 = document.querySelector('.install33');
+  const install34 = document.querySelector('.install34');
   const install35 = document.querySelector('.install35');
+  const install36 = document.querySelector('.install36');
+  const install37 = document.querySelector('.install37');
+  const install38 = document.querySelector('.install38');
+  const install39 = document.querySelector('.install39');
+  const install40 = document.querySelector('.install40');
+
+
 
 
   install01.addEventListener('click', () => {
@@ -178,9 +186,34 @@ document.querySelectorAll('.grupo-install').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
   });
 
+  /*install34.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird4/Firebird-2.5.9.27139_0_Win32.exe', 'FireBird5.0.3')
+  });*/
+
  install35.addEventListener('click', ()=>{
   baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird5/Firebird-5.0.0.1306-0-windows-x86.exe', 'Firebird5.0.0')
  });
+
+ install36.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird6/Firebird-2.5.9.27139_0_x64.exe', 'Firebird5.0.0')
+ });
+
+ install37.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/Firebird7/Firebird-5.0.0.1306-windows-x64.exe', 'Firebird5.0.0')
+ });
+
+ install38.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/FireBird9/Firebird-5.0.2.1613-0-windows-x64.exe', 'Firebird5.0.0')
+ });
+
+ install39.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/FireBird10/Firebird-5.0.3.1683-0-windows-x64.exe', 'Firebird5.0.0')
+ });
+
+ install40.addEventListener('click', ()=>{
+  baixarArquivo('https://github.com/Igorf10/FarmaxInstaladores/releases/download/FireBird8/Firebird-5.0.1.1469-0-windows-x64.exe', 'Firebird5.0.0')
+ });
+
 
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
