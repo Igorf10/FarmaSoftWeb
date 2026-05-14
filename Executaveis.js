@@ -73,7 +73,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe07 = document.querySelector('.Exe07');
   const Exe09 = document.querySelector('.Exe09');
   const Exe10 = document.querySelector('.Exe10');
-  const Exe11 = document.querySelector('.Exe11');
+  const Exe11 = document.querySelector('.Exe11')
   const Exe12 = document.querySelector('.Exe12');
   const Exe13 = document.querySelector('.Exe13');
   const Exe14 = document.querySelector('.Exe14');
@@ -100,6 +100,9 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe35 = document.querySelector('.Exe35');
   const Exe36 = document.querySelector('.Exe36');
   const Exe37 = document.querySelector('.Exe37');
+  const Exe38 = document.querySelector('.Exe38');
+  const Exe39 = document.querySelector('.Exe39');
+
 
 
 
@@ -119,7 +122,6 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   Exe04.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor2/Gestor.exe', 'Gestor4.3')
   });
-
 
   Exe05.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/AtualizardorFarmax/AtualizadorFarmax.exe', 'AtualizadorFarmax')
@@ -207,7 +209,6 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
   Exe29.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxRecarga/FARMAXRECARGA.rar', 'FarmaxRecarga')
-
   });
   Exe30.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSintegra/FarmaxSintegra2024.exe', 'Sintegra')
@@ -223,7 +224,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
   
   Exe33.addEventListener('click', () => {
-    baixarArquivo('https://farmax.far.br/download/Sngpc.exe', 'Exe.SNGPC')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/ExeSNGPC/Sngpc.exe', 'Exe.SNGPC')
   });
 
   
@@ -249,6 +250,14 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
   });
 
+   Exe38.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+  });
+
+    Exe39.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+  });
+
 
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
@@ -258,17 +267,4 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
