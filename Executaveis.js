@@ -132,7 +132,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
   
   Exe09.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas25/FarmaxMonitorNfe.exe', 'MonitordeNotas25')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas26/FarmaxMonitorNfe.exe', 'MonitordeNotas25')
   });
 
   Exe10.addEventListener('click', () => {
@@ -147,7 +147,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe2/FarmaxDanfe.exe', 'Danfe17')
   });
   Exe13.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxEtiquetas/FarmaxEtiquetas.1.4.0.exe', 'FarmaxEtiquetas')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxEtiquetas/FarmaxEtiquetas.exe', 'FarmaxEtiquetas')
   });
   Exe14.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaciasAPP/FarmaciasAPP.exe', 'FarmaciasAPP')
@@ -170,7 +170,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
 
   Exe19.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Avant/AvantFiscal.FIREBIRD.50.exe', 'Avant')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Avant/AvantFiscal_3.0.6_Setup.zip', 'Avant')
   });
 
   Exe20.addEventListener('click', () => {
@@ -224,7 +224,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
 
   
   Exe33.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/ExeSNGPC/Sngpc.exe', 'Exe.SNGPC')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/ExeSNGPC/SNGPC.exe', 'Exe.SNGPC')
   });
 
   
