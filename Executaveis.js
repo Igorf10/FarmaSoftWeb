@@ -83,7 +83,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe18 = document.querySelector('.Exe18');
   const Exe19 = document.querySelector('.Exe19');
   const Exe20 = document.querySelector('.Exe20');
-  const Exe21 = document.querySelector('.Exe21');
+  //const Exe21 = document.querySelector('.Exe21');//
   const Exe22 = document.querySelector('.Exe22');
   const Exe23 = document.querySelector('.Exe23');
   const Exe24 = document.querySelector('.Exe24');
@@ -177,9 +177,9 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Imendes/IMENDES.rar', 'Imendes')
   });
 
-  Exe21.addEventListener('click', () => {
+  /*Exe21.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaciasAPI/FarmaxApi.exe', 'FarmaxApi')
-  });
+  });*/
 
   Exe22.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxColetor/ApiServer.exe', 'FarmaxColetor')
