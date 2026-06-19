@@ -94,7 +94,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe29 = document.querySelector('.Exe29');
   const Exe30 = document.querySelector('.Exe30');
   const Exe31 = document.querySelector('.Exe31');
-  //const Exe32 = document.querySelector('.Exe32');//
+  const Exe32 = document.querySelector('.Exe32');
   const Exe33 = document.querySelector('.Exe33');
   const Exe34 = document.querySelector('.Exe34');
   const Exe35 = document.querySelector('.Exe35');
@@ -177,7 +177,7 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Imendes/IMENDES.rar', 'Imendes')
   });
 
-  /*Exe21.addEventListener('click', () => {
+ /* Exe21.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaciasAPI/FarmaxApi.exe', 'FarmaxApi')
   });*/
 
@@ -218,9 +218,9 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDDA/FarmaxDDA.exe', 'FarmaxDDA')
   });
 
-  /*Exe32.addEventListener('click', () => {
-    baixarArquivo('', 'FarmaxIfood')
-  });*/
+  Exe32.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor5.1/Gestor.exe', 'Exe.gestor5.1')
+  });
 
   
   Exe33.addEventListener('click', () => {
@@ -251,11 +251,11 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
 
    Exe38.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxSuporte/SuporteFarmax.exe', 'Exe.FarmaxIFOOD3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
   });
 
     Exe39.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxIfood2/FarmaxIfood.exe', 'Exe.FarmaxIFOOD3')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV5.1/FarmaxPDV.exe', 'Exe.FarmaxPDV5.1')
   });
 
 
@@ -268,3 +268,22 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     document.body.removeChild(link);
   }
 
+   function copiar(copy) {
+
+    const texto = document.getElementById('EXc0');
+    let textcopiado = ''
+    try {
+     textcopiado = copy.innerText || copy.textContent;
+      navigator.clipboard.writeText(textcopiado);
+       
+        texto.classList.add('fade-in');
+      
+    setTimeout(()=> {
+     
+      texto.classList.remove("fade-in");
+    }, 3000);
+  
+    } catch (err) {
+      console.error('Falha ao copiar texto: ', err);
+    }
+  }
