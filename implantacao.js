@@ -17,42 +17,28 @@ document.querySelectorAll('.grupo-banco').forEach(grupo => {
   const implantacao3 = document.querySelector('.implantacao3');
   const implantacao4 = document.querySelector('.implantacao4');
   const implantacao5 = document.querySelector('.implantacao5');
-  const implantacao6 = document.querySelector('.implantacao6');
-  const implantacao7 = document.querySelector('.implantacao7');
-  const implantacao8 = document.querySelector('.implantacao8');
+
 
 
   implantacao1.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOSN/BANCOv4.3.0.1SN.rar', 'BANCOv4.3.0.1SN');
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOSN5.0/BANCOSIMPLESv52.rar', 'BANCOv5.2.SN');
   });
 
   implantacao2.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOMERCADO/MERCADOv4.3.0.1.rar', 'MERCADOv4.3.0.1');
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOLR5.0/BANCOLUCROv52.rar', 'BANCOLUCROv5.2LR');
   });
 
   
   implantacao3.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOPETSHOP/PETSHOPv4.3.0.1.rar', 'PETSHOPv4.3.0.1')
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOMERCADO/MERCADOv4.3.0.1.rar', 'MERCADOv4.3.0.1')
   });
 
   implantacao4.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/SNGPC/BANCOS.SNGPC.ZERADOS.rar', 'SNGPCv3.0.1.79')
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/BANCOPETSHOP/PETSHOPv4.3.0.1.rar', 'PETSHOPv4.3.0.1')
   });
 
   implantacao5.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxArquivos/releases/download/teste5/IMPLANTACAOS.BANCO5.rar', 'IMPLANTACAO.BANCO')
-  });
-
-  implantacao6.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxArquivos/releases/download/teste6/IMPLANTACAOS.BANCO6.rar', 'IMPLANTACAO.BANCO')
-  });
-
-  implantacao7.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxArquivos/releases/download/teste7/IMPLANTACAOS.BANCO7.rar', 'IMPLANTACAO.BANCO')
-  });
-
-  implantacao8.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxArquivos/releases/download/teste8/IMPLANTACAOS.BANCO8.rar', 'IMPLANTACAO.BANCO')
+    baixarArquivo('https://github.com/Igorf10/FarmaxImplantacao/releases/download/SNGPC/BANCOS.SNGPC.ZERADOS.rar', 'BANCOS.SNGPC.ZERADO')
   });
 
   function baixarArquivo(url, nomeArquivo) {
@@ -63,5 +49,4 @@ document.querySelectorAll('.grupo-banco').forEach(grupo => {
     link.click();
     document.body.removeChild(link);
   }
-
 
