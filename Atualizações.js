@@ -20,6 +20,8 @@ document.querySelectorAll('.grupo-att').forEach(grupo => {
   const Att06 = document.querySelector('.Att06');
   const Att07 = document.querySelector('.Att07');
   const Att08 = document.querySelector('.Att08');
+  const Att09 = document.querySelector('.Att09');
+  const Att10 = document.querySelector('.Att10');
 
   Att01.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Farmax5.0/Farmax5.0.rar', 'v5.0.0.0');
@@ -53,6 +55,14 @@ document.querySelectorAll('.grupo-att').forEach(grupo => {
     baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base5.1.0.0/BASEFARMAX5.zip', 'Base v5.1.0.0');
   });
 
+    Att09.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Farmax5.2/Farmax5.2.rar', 'Base v5.2.0.0');
+  });
+
+    Att10.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxAtualizacoes/releases/download/Base5.2.0.0/BASEFARMAX5.zip', 'Base v5.2.0.0');
+  });
+  
   function baixarArquivo(url, nomeArquivo) {
     const link = document.createElement('a');
     link.href = url;
