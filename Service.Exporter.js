@@ -19,13 +19,14 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   const serviceEx05 = document.querySelector('.serviceEx05');
   const serviceEx06 = document.querySelector('.serviceEx06');
   const serviceEx07 = document.querySelector('.serviceEx07');
-  /*const serviceEx08 = document.querySelector('.serviceEx08');*/
+  const serviceEx08 = document.querySelector('.serviceEx08');
   const serviceEx09 = document.querySelector('.serviceEx09');
   /*const serviceEx10 = document.querySelector('.serviceEx10');*/
   const serviceEx11 = document.querySelector('.serviceEx11');
   /*const serviceEx12 = document.querySelector('.serviceEx12');*/
   const serviceEx13 = document.querySelector('.serviceEx13');
   const serviceEx14 = document.querySelector('.serviceEx14');
+  const serviceEx15 = document.querySelector('.serviceEx15');
 
 
   serviceEx01.addEventListener('click', () => {
@@ -46,20 +47,21 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });
 
   serviceEx05.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClient3/ExporterClient.exe', 'ExporterClient04.05.26')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClient23.07.2026/ExporterClient.exe', 'ExporterClient23.07.26')
   });
 
   serviceEx06.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxAPI/FarmaxApi.rar', 'FarmaxAPI')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxAPI23.07.26/FarmaxApi.exe', 'FarmaxAPI')
   });
 
   serviceEx07.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterTrigger/ExporterTrigger.exe', 'ExporterTrigger')
   });
 
-  /*serviceEx08.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterQuick/ExporterClientQuick.exe', 'ExporterClientQuick08.01')
-  });*/
+  serviceEx08.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClientQuick22.07.26/ExporterClientQuick.exe', 'ExporterClientQuick22.07.26')
+  });
+
   serviceEx09.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClientQuick2/ExporterClientQuick.exe', '1ExporterClientQuick.04.05.26')
   });
@@ -69,18 +71,22 @@ document.querySelectorAll('.grupo-servicos').forEach(grupo => {
   });*/
 
   serviceEx11.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxServer2/ExporterServer.exe', 'ExporterServer05.05.26')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterServer22.07.2026/ExporterServer.exe', 'ExporterServer22.07.26')
   });
 
   /*serviceEx12.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/FarmaxRefresher/FarmaxRefresher.exe', 'FarmaxRefresher30.07')
   });*/
     serviceEx13.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceRefresher2/FarmaxRefresher.exe', 'FarmaxRefresher25.06')
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/Refresher22.07.2026/FarmaxRefresher.exe', 'FarmaxRefresher22.07.26')
   });
 
   serviceEx14.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ServiceIfood/ServiceFarmaxIfood.exe', 'ServiceFarmaxIfood');
+  });
+
+    serviceEx15.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxServicoExportadores/releases/download/ExporterClient04.05.2026/ExporterClient.exe', 'ExporterClient04.05.26');
   });
 
 
