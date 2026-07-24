@@ -93,7 +93,8 @@ body {
 .serviceEx11,
 .serviceEx12,
 .serviceEx13,
-.serviceEx14
+.serviceEx14,
+.serviceEx15
 {
   width: 180px; 
   height: 60px; 
@@ -128,7 +129,8 @@ body {
 .serviceEx11::before,
 .serviceEx12::before,
 .serviceEx13::before,
-.serviceEx14::before
+.serviceEx14::before,
+.serviceEx15::before
 {
   content: "";
   display: inline-block;
@@ -191,7 +193,8 @@ body {
 .serviceEx11:hover::before,
 .serviceEx12:hover::before,
 .serviceEx13:hover::before,
-.serviceEx14:hover::before
+.serviceEx14:hover::before,
+.serviceEx15:hover::before
  {
   transform: translateY(4px); 
 }
@@ -210,7 +213,8 @@ body {
 .serviceEx11:hover,
 .serviceEx12:hover,
 .serviceEx13:hover,
-.serviceEx14:hover{
+.serviceEx14:hover,
+.serviceEx15:hover{
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #2196F3, #0D47A1);
@@ -230,7 +234,8 @@ body {
 .serviceEx11:active,
 .serviceEx12:active,
 .serviceEx13:active,
-.serviceEx14:active{
+.serviceEx14:active,
+.serviceEx15:active{
   transform: scale(0.96);
 }
 
