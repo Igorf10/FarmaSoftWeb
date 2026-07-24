@@ -171,7 +171,9 @@ body {
 .Exe36,
 .Exe37,
 .Exe38,
-.Exe39
+.Exe39,
+.Exe40,
+.Exe41
 {
   width: 180px; 
   height: 60px; 
@@ -231,7 +233,9 @@ body {
 .Exe36::before,
 .Exe37::before,
 .Exe38::before,
-.Exe39::before{
+.Exe39::before,
+.Exe40::before,
+.Exe41::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -318,7 +322,9 @@ body {
 .Exe36:hover::before,
 .Exe37:hover::before,
 .Exe38:hover::before,
-.Exe39:hover::before
+.Exe39:hover::before,
+.Exe40:hover::before,
+.Exe41:hover::before
  {
   transform: translateY(4px); 
 }
@@ -362,7 +368,9 @@ body {
 .Exe36:hover,
 .Exe37:hover,
 .Exe38:hover,
-.Exe39:hover
+.Exe39:hover,
+.Exe40:hover,
+.Exe41:hover
 {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -408,7 +416,9 @@ body {
 .Exe36:active,
 .Exe37:active,
 .Exe38:active,
-.Exe39:active
+.Exe39:active,
+.Exe40:active,
+.Exe41:active
 {
   transform: scale(0.96);
 }
