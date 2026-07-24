@@ -102,6 +102,8 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   const Exe37 = document.querySelector('.Exe37');
   const Exe38 = document.querySelector('.Exe38');
   const Exe39 = document.querySelector('.Exe39');
+  const Exe40 = document.querySelector('.Exe40');
+  const Exe41 = document.querySelector('.Exe41');
 
 
 
@@ -132,15 +134,15 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
   });
   
   Exe09.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas26/FarmaxMonitorNfe.exe', 'MonitordeNotas25')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas01.06.2026/FarmaxMonitorNfe.exe', 'MonitordeNotas01.06')
   });
 
   Exe10.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas22/FarmaxMonitorNfe.exe', 'MonitordeNotas22')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/MonitordeNotas26/FarmaxMonitorNfe.exe', 'MonitordeNotas25.05')
   });
 
   Exe11.addEventListener('click', () => {
-    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe1/FarmaxDanfe.exe', 'Danfe17v2')
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/FarmaxDanfe1/FarmaxDanfe.exe', 'Danfe17Atual')
   });
   
   Exe12.addEventListener('click', () => {
@@ -257,6 +259,16 @@ document.querySelectorAll('.grupo-executaveis').forEach(grupo => {
     Exe39.addEventListener('click', () => {
     baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV5.1/FarmaxPDV.exe', 'Exe.FarmaxPDV5.1')
   });
+
+      Exe40.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/PDV5.2/FarmaxPDV.exe', 'Exe.FarmaxPDV5.2')
+  });
+
+      Exe41.addEventListener('click', () => {
+    baixarArquivo('https://github.com/Igorf10/FarmaxExecutaveis/releases/download/Gestor5.2/Gestor.exe', 'Exe.FarmaxGestor5.2')
+  });
+
+
 
 
   function baixarArquivo(url, nomeArquivo) {
